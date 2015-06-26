@@ -1,0 +1,20 @@
+@mixin flash($color) {
+  background: $color;
+  color: darken($color, 60);
+  font-weight: bold;
+  margin-bottom: $base-line-height / 2;
+  padding: $base-line-height / 2;
+
+  a {
+    color: darken($color, 70);
+
+    &:hover {
+      color: darken($color, 90);
+    }
+  }
+}
+
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}

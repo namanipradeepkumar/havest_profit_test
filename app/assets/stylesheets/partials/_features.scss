@@ -1,0 +1,50 @@
+
+.features {
+
+	.feature-item {
+		 // start with default grid for smallest screens (full 10% width)
+	  @include span-columns(12);
+	  // full width no omega needed
+
+	  // Next adjust for medium screens
+	  @include media(medium-screen-up) {
+		  @include span-columns(6);
+		  @include omega(2n);
+		}
+
+	  // also I like to use this: http://www.joshfry.me/blog/2013/05/13/omega-reset-for-bourbon-neat/
+
+	  // finally adjust for large
+		@include media($large-screen-up) {
+		  	// Reset the 2m omega
+		  	@include omega-reset(2n);
+      		@include span-columns(4);
+      		// Add the new omega every 3rd item
+      		@include omega(3n);
+	}
+
+		padding: 3em 0 2em;
+		text-align: center;
+
+		h4 {
+			text-transform: uppercase;
+			font-size: 1.3em;
+			padding-bottom: .5em;
+		}
+
+		p {
+			color: darken(white, 50%);
+		}
+
+		i {
+			font-size: 4em;
+			color: darken(white, 20%);
+			margin-bottom: .3em;
+			transition: color .2s;
+		}
+
+		&:hover i {
+			color: #288C14;		
+		}
+	}
+}

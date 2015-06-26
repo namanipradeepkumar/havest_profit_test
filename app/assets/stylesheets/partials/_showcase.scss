@@ -1,0 +1,216 @@
+.baseline {
+  padding: 1em;
+  margin-bottom: 4em;
+  margin-top: 1em;
+}
+  
+.baseline > div {
+  width: 25%;
+  float: left;
+  padding: 0em 1em;
+}
+
+#baselinecalcvalue {
+  margin-top: 1em;
+}
+
+
+h4 {
+  text-align: center;
+}
+
+th {
+  text-align: center;
+} 
+
+td {
+	text-align: center;
+}
+
+
+#section-showcase {
+	padding: 6em 0 5em;
+}
+.chart {
+  padding: 1em 0 5em;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-style: solid;
+  border-width: 2px;
+
+  -webkit-box-shadow: 5px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 5px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 5px 3px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.showcase {
+	padding: 1em 0 5em;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+  
+	.split {
+		@include clearfix;
+		margin: 5em 0 0 0;
+		
+
+		.split-left,
+		.split-right {
+			@include span-columns(6);   
+			@include media($large-screen-down) {
+				@include span-columns(12);
+				@include pad(1em 3em);
+				text-align: center;
+				float: none !important;
+			}
+			@include media($small-screen-down) {
+				@include pad(10px);
+			}
+		}
+
+    
+    .split-table {
+      @include span-columns(12);   
+      @include media($large-screen-down) {
+        @include span-columns(12);
+        @include pad(1em 3em);
+        text-align: center;
+        float: none !important;
+      }
+      @include media($small-screen-down) {
+        @include pad(10px);
+      }
+    }
+		.split-left.float-right {
+			float: right;
+
+			&.split-text {
+				
+				@include media($large-screen-up) {
+					padding-left: 1.5em;
+				}
+			}
+		}
+
+		.split-right.float-left {
+			float: left;
+		}
+
+		.split-media {
+
+			#showcase-slider .item img{
+			    display: block;
+			    width: 100%;
+			    height: auto;
+			    cursor: move;
+			}
+		}
+		
+		.img {
+			@include span-columns(3);
+			@include omega(5n);
+			margin-bottom: 1em;
+		}
+	}
+}
+
+.showcase.gray {
+	background: darken(white, 5%);
+}
+
+.table-minimal {
+  
+///////////////////////////////////////////////////////////////////////////////////
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-background-color: white !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
+  $base-font-color: $dark-gray !default;
+  border: 1px solid silver;
+  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  ///////font-family: 'Open Sans', sans-serif;
+  
+  width: 100%;
+
+  th {
+    text-align: left;
+  }
+
+  td {
+    line-height: $base-line-height;
+  }
+  
+//////////////////////////////////////////////////////////////////////////////////
+
+  $table-border-color: $base-border-color;
+  $table-border: 1px solid $table-border-color;
+  $table-background: $base-background-color;
+  $table-header-background: lighten($table-background, 10);
+  $table-hover-background: darken($table-background, 2);
+  $table-stripe-background: darken($table-background, 4);
+  $table-stripe-background-hover: darken($table-stripe-background, 5);
+  $table-padding: .75em 1em;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  table {
+     border: 1px solid silver;
+     box-shadow:         3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  }
+
+  tbody {
+    tr:hover > td, tr:hover > th {
+      background-color: $table-hover-background;
+    }
+    tr:first-child td {
+      border-top: 2px solid $table-border-color;
+    }
+  }
+
+  thead {
+    th {
+      background-color: $table-header-background;
+      border-bottom: 0px;
+      padding: $table-padding;
+    }
+  }
+
+  tbody {
+    background-color: $table-background;
+
+    td {
+      border-bottom: 0px;
+      border-top: 1px solid $table-border-color;
+      padding: $table-padding;
+
+      button {
+        @include button(flat, $base-accent-color);
+        display: inline-block;
+        font-size: .7em;
+        line-height: $base-line-height;
+        margin-bottom: .3em;
+        margin-right: 0.5em;
+        outline: none;
+        padding: .3em 1em;
+        width: 100%;
+
+        @include media($medium-screen) {
+          margin-bottom: 0;
+          width: auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+"~/.gitignore_global"
+.DS_Store
+/.bundle
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/log/*.log
+/tmp
+/bin/log
+dump.rdb
+.env

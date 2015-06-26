@@ -1,0 +1,198 @@
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<div class='hold'>
+    <div class='container'>
+    <%= form_for(@contract) do |f| %>
+      <% if @contract.errors.any? %>
+        <div id='error_explanation'>
+          <h2><%= pluralize(@contract.errors.count, 'error') %> prohibited this contract from being saved:</h2>
+
+          <ul>
+          <% @contract.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class='field'>
+        <%= f.label :year %><br>
+        <%= f.select :year, ((Date.today.year)..(Date.today.year + 5)).map{|year| [year, year] } %>
+      </div>
+      <div class='field'>
+        <%= f.label :contract_type %><br>
+        <%= collection_select( :contract, :contract_type_id, ContractType.all, :id, :description, {}, { :multiple => false})  %>
+      </div>
+      <div class='field'>
+        <%= f.label :open_order %><br>
+        <%= f.check_box :open_order %>
+      </div>
+      <div class='field'>
+        <%= f.label :bushels %><br>
+        <%= f.text_field :bushels %>
+      </div>
+      <div class='field'>
+        <%= f.label :delivery_location %><br>
+        <%= f.text_field :delivery_location %>
+      </div>
+      <div class='field'>
+        <%= f.label :futures_month %><br>
+        <%= f.text_field :futures_month %>
+      </div>
+      <div class='field'>
+        <%= f.label :futures_price %><br>
+        <%= f.text_field :futures_price %>
+      </div>
+      <div class='field'>
+        <%= f.label :basis %><br>
+        <%= f.text_field :basis %>
+      </div>
+      <div class='field'>
+        <%= f.label :cash_price %><br>
+        <%= f.text_field :cash_price %>
+      </div>
+      <div class='field'>
+        <%= f.label :contract_number %><br>
+        <%= f.text_field :contract_number %>
+      </div>
+      <div class='field'>
+        <%= f.label :long_short %><br>
+        <%= f.text_field :long_short %>
+      </div>
+      <div class='field'>
+        <%= f.label :contracts %><br>
+        <%= f.number_field :contracts %>
+      </div>
+      <div class='field'>
+        <%= f.label :strike_price %><br>
+        <%= f.text_field :strike_price %>
+      </div>
+      <div class='field'>
+        <%= f.label :gain_loss %><br>
+        <%= f.text_field :gain_loss %>
+      </div>
+      <div class='field'>
+        <%= f.label :delivery_period %><br>
+        <%= f.text_field :delivery_period %>
+      </div>
+      <%# f.hidden_field :user_id, value: current_user.id %>
+      <div class='actions'>
+        <%= f.submit %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="kc_fab_wrapper">
+</div>
+
+
+<% content_for :scripts do %>
+  <script>
+    function parentFor(field) {
+      var form_selector = 'form#new_contract',
+          number_input_selector = form_selector + ' input[type=number]#contract_' + field,
+          text_input_selector = form_selector + ' input[type=text]#contract_' + field,
+          check_box_selector = form_selector + ' input[type=check_box]#contract_' + field;
+
+      return $(number_input_selector + ', ' + text_input_selector + ', ' + check_box_selector).parent();
+    }
+
+    function selectFunctionality(self) {
+      var value = self.val(),
+          cashId = <%= ContractType.where(description: 'Cash Sale').first_or_create.id %>,
+          forwardId = <%= ContractType.where(description: 'Forward Contract').first_or_create.id %>,
+          hedgeId = <%= ContractType.where(description: 'Hedge-To-Arrive').first_or_create.id %>,
+          basisId = <%= ContractType.where(description: 'Basis Contract').first_or_create.id %>,
+          futuresId = <%= ContractType.where(description: 'Futures Contract').first_or_create.id %>,
+          putId = <%= ContractType.where(description: 'Put Option').first_or_create.id %>,
+          callId = <%= ContractType.where(description: 'Call Option').first_or_create.id %>,
+          parents = $('form#new_contract input[type=number], form#new_contract input[type=text], form#new_contract input[type=check_box]').parents();
+
+          parents.removeClass('hidden');
+      if (value == forwardId) {
+        parentFor('futures_month').addClass('hidden');
+        parentFor('long_short').addClass('hidden');
+        parentFor('contracts').addClass('hidden');
+        parentFor('strike_price').addClass('hidden');
+        parentFor('gain_loss').addClass('hidden');
+      } else if (value == hedgeId) {
+        parentFor('long_short').addClass('hidden');
+        parentFor('contracts').addClass('hidden');
+        parentFor('strike_price').addClass('hidden');
+        parentFor('gain_loss').addClass('hidden');
+      } else if (value == cashId) {
+        parentFor('futures_month').addClass('hidden');
+        parentFor('long_short').addClass('hidden');
+        parentFor('contracts').addClass('hidden');
+        parentFor('strike_price').addClass('hidden');
+        parentFor('gain_loss').addClass('hidden');
+        parentFor('delivery_period').addClass('hidden');
+      }
+    }
+
+    function setCashPrice() {
+      var cash_price = parseFloat($('input#contract_basis').val()),
+          futures_price = parseFloat($('input#contract_futures_price').val());
+
+      if(isNaN(cash_price)) {
+        cash_price = 0;
+      }
+
+      if(isNaN(futures_price)) {
+        cash_price = 0;
+      }
+
+      $('input#contract_cash_price').val(cash_price + futures_price);
+    }
+
+    $(document).ready(function () {
+      selectFunctionality($('select#contract_contract_type_id'));
+      $('select#contract_contract_type_id').change(function() {
+        selectFunctionality($(this));
+      });
+
+      $('input#contract_basis, input#contract_futures_price').change(setCashPrice);
+
+      $('.kc_fab_wrapper').kc_fab(links);
+    });
+
+
+
+    var links = [
+{
+  "bgcolor":"#03A9F4",
+  "icon":"+"
+},
+{
+  "url":"http://plus.google.com",
+  "bgcolor":"#DB4A39",
+  "color":"#fffff",
+  "icon":"<i class='fa fa-google-plus'></i>",
+  "target":"_blank"
+},
+{
+  "url":"http://www.facebook.com",
+  "bgcolor":"#00ACEE",
+  "color":"#fffff",
+  "icon":"<i class='fa fa-facebook'></i>",
+  "target":"_blank"
+},
+{
+  "url":"http://www.facebook.com",
+  "bgcolor":"#3B5998",
+  "color":"#fffff",
+  "icon":"<i class='fa fa-facebook'></i>",
+  "target":"_blank"
+},
+{
+  "url":"http://www.jqueryscript.net",
+  "bgcolor":"#263238",
+  "color":"white",
+  "icon":"<i class='fa fa-home'></i>"
+}
+]
+
+  </script>
+<% end %>

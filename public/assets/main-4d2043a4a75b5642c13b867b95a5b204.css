@@ -1,0 +1,3101 @@
+@charset "UTF-8";
+/* =====================
+NEAT - TABLE OF CONTENTS
+========================
+
+1. CSS RESET - MEYERWEB
+2. BOURBON BITTERS STYLES
+3. OWL CAROUSEL STYLES
+4. TEMPLATE GLOBAL STYLES
+5. HEADER
+6. INTRO SECTION
+7. FEATURES SECTION
+8. NEWSLETTER SECTION
+9. SHOWCASE SECTION
+10. QUOTE / TESTIMONIALS
+11. CONTACT SECTION
+12. FOOTER
+13. USER CUSTOMISATION
+
+===================== */
+/* ====================
+1. CSS RESET - MEYERWEB
+==================== */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 40, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/extends/_button.scss */
+a.button,
+button,
+input[type="submit"] {
+  -webkit-font-smoothing: antialiased;
+  background-color: #2ecc71;
+  border-radius: 0.1875em;
+  color: white;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  padding: .75em 1em;
+  text-decoration: none;
+}
+/* line 13, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/extends/_button.scss */
+a.button:hover,
+button:hover,
+input[type="submit"]:hover {
+  background-color: #208e4e;
+  color: white;
+}
+
+/* line 1, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_typography.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: white;
+  color: #333;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* line 10, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  line-height: 1.25em;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+
+/* line 17, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_typography.scss */
+h1 {
+  font-size: 2.25em;
+}
+
+/* line 21, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_typography.scss */
+h2 {
+  font-size: 2em;
+}
+
+/* line 25, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_typography.scss */
+h3 {
+  font-size: 1.75em;
+}
+
+/* line 29, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_typography.scss */
+h4 {
+  font-size: 1.5em;
+}
+
+/* line 33, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_typography.scss */
+h5 {
+  font-size: 1.25em;
+}
+
+/* line 37, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_typography.scss */
+h6 {
+  font-size: 1em;
+}
+
+/* line 41, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_typography.scss */
+p {
+  margin: 0 0 0.75em;
+}
+
+/* line 45, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_typography.scss */
+a {
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+  color: #2ecc71;
+  text-decoration: none;
+}
+/* line 50, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_typography.scss */
+a:hover {
+  color: #208e4e;
+}
+/* line 54, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_typography.scss */
+a:active, a:focus {
+  color: #208e4e;
+  outline: none;
+}
+
+/* line 60, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_typography.scss */
+hr {
+  border-bottom: 1px solid #DDD;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0;
+}
+
+/* line 68, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_typography.scss */
+img {
+  margin: 0;
+  max-width: 100%;
+}
+
+/* line 73, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_typography.scss */
+blockquote {
+  border-left: 2px solid #DDD;
+  color: #595959;
+  margin: 1.5em 0;
+  padding-left: 0.75em;
+}
+
+/* line 80, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_typography.scss */
+cite {
+  color: #737373;
+  font-style: italic;
+}
+/* line 84, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_typography.scss */
+cite:before {
+  content: '\2014 \00A0';
+}
+
+/* line 1, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_forms.scss */
+fieldset {
+  background: #f7f7f7;
+  border: 1px solid #DDD;
+  margin: 0 0 0.75em 0;
+  padding: 1.5em;
+}
+
+/* line 8, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_forms.scss */
+input,
+label,
+select {
+  display: block;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+}
+
+/* line 16, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_forms.scss */
+label {
+  font-weight: bold;
+  margin-bottom: 0.375em;
+}
+/* line 20, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_forms.scss */
+label.required:after {
+  content: "*";
+}
+/* line 24, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_forms.scss */
+label abbr {
+  display: none;
+}
+
+/* line 29, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_forms.scss */
+textarea,
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], textarea,
+select[multiple=multiple] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: border-color;
+  -moz-transition: border-color;
+  transition: border-color;
+  background-color: white;
+  border-radius: 0.1875em;
+  border: 1px solid #DDD;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em 0.5em;
+  width: 100%;
+}
+/* line 44, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_forms.scss */
+textarea:hover,
+input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, textarea:hover,
+select[multiple=multiple]:hover {
+  border-color: #c4c4c4;
+}
+/* line 48, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_forms.scss */
+textarea:focus,
+input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, textarea:focus,
+select[multiple=multiple]:focus {
+  border-color: #2ecc71;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(41, 183, 101, 0.7);
+  outline: none;
+}
+
+/* line 55, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_forms.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 59, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+/* line 63, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_forms.scss */
+input[type="checkbox"], input[type="radio"] {
+  display: inline;
+  margin-right: 0.375em;
+}
+
+/* line 68, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_forms.scss */
+input[type="file"] {
+  margin-bottom: 0.75em;
+  padding-bottom: 0.5em;
+  width: 100%;
+}
+
+/* line 74, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_forms.scss */
+select {
+  width: auto;
+  max-width: 100%;
+  margin-bottom: 1.5em;
+}
+
+/* line 1, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_tables.scss */
+table {
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* line 8, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_tables.scss */
+th {
+  border-bottom: 1px solid #b7b7b7;
+  font-weight: bold;
+  padding: 0.75em 0;
+  text-align: left;
+}
+
+/* line 15, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_tables.scss */
+td {
+  border-bottom: 1px solid #DDD;
+  padding: 0.75em 0;
+}
+
+/* line 20, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_tables.scss */
+tr, td, th {
+  vertical-align: middle;
+}
+
+/* line 1, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_lists.scss */
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+/* line 19, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_lists.scss */
+dl {
+  margin-bottom: 0.75em;
+}
+/* line 22, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_lists.scss */
+dl dt {
+  font-weight: bold;
+  margin-top: 0.75em;
+}
+/* line 27, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_lists.scss */
+dl dd {
+  margin: 0;
+}
+
+/* line 1, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/_buttons.scss */
+a.button,
+button,
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* line 4, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 9, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/* ====================
+2. BOURBON BITTERS STYLES
+==================== */
+/* ====================
+3. OWL CAROUSEL + FLEXSLIDER STYLES
+==================== */
+/* 
+ *  Owl Carousel - Animate Plugin
+ */
+/* line 4, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .animated {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* line 10, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .owl-animated-in {
+  z-index: 0;
+}
+
+/* line 13, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .owl-animated-out {
+  z-index: 1;
+}
+
+/* line 16, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* 
+ * 	Owl Carousel - Auto Height Plugin
+ */
+/* line 43, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-height {
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -ms-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+
+/* 
+ *  Core Owl Carousel CSS File
+ */
+/* line 54, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1;
+}
+
+/* line 62, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+}
+
+/* line 66, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 74, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+/* line 80, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .owl-controls .owl-nav .owl-prev,
+.owl-carousel .owl-controls .owl-nav .owl-next,
+.owl-carousel .owl-controls .owl-dot {
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 91, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel.owl-loaded {
+  display: block;
+}
+
+/* line 94, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block;
+}
+
+/* line 98, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel.owl-hidden {
+  opacity: 0;
+}
+
+/* line 101, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .owl-refresh .owl-item {
+  display: none;
+}
+
+/* line 104, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 116, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+}
+
+/* line 121, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel.owl-text-select-on .owl-item {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+
+/* line 127, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .owl-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: grab;
+}
+
+/* line 134, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel.owl-rtl {
+  direction: rtl;
+}
+
+/* line 137, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel.owl-rtl .owl-item {
+  float: right;
+}
+
+/* No Js */
+/* line 142, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.no-js .owl-carousel {
+  display: block;
+}
+
+/* 
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+/* line 149, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease;
+  -moz-transition: opacity 400ms ease;
+  -ms-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+
+/* line 157, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .owl-item img {
+  transform-style: preserve-3d;
+}
+
+/* 
+ * 	Owl Carousel - Video Plugin
+ */
+/* line 164, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000;
+}
+
+/* line 169, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url("owl.video.play.png") no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: scale 100ms ease;
+  -moz-transition: scale 100ms ease;
+  -ms-transition: scale 100ms ease;
+  -o-transition: scale 100ms ease;
+  transition: scale 100ms ease;
+}
+
+/* line 187, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .owl-video-play-icon:hover {
+  -webkit-transition: scale(1.3, 1.3);
+  -moz-transition: scale(1.3, 1.3);
+  -ms-transition: scale(1.3, 1.3);
+  -o-transition: scale(1.3, 1.3);
+  transition: scale(1.3, 1.3);
+}
+
+/* line 194, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .owl-video-playing .owl-video-tn,
+.owl-carousel .owl-video-playing .owl-video-play-icon {
+  display: none;
+}
+
+/* line 198, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  -webkit-transition: opacity 400ms ease;
+  -moz-transition: opacity 400ms ease;
+  -ms-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+
+/* line 213, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+}
+
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+/* Browser Resets
+*********************************/
+/* line 233, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none;
+}
+
+/* line 237, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Icon Fonts
+*********************************/
+/* Font-face Icons */
+@font-face {
+  font-family: 'flexslider-icon';
+  src: url("fonts/flexslider-icon.eot");
+  src: url("fonts/flexslider-icon.eot?#iefix") format("embedded-opentype"), url("fonts/flexslider-icon.woff") format("woff"), url("fonts/flexslider-icon.ttf") format("truetype"), url("fonts/flexslider-icon.svg#flexslider-icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* FlexSlider Necessary Styles
+*********************************/
+/* line 257, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 258, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+/* line 259, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
+
+/* line 260, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+/* line 263, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.slides:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 264, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+html[xmlns] .slides {
+  display: block;
+}
+
+/* line 265, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+* html .slides {
+  height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+/* line 270, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.no-js .slides > li:first-child {
+  display: block;
+}
+
+/* FlexSlider Default Theme
+*********************************/
+/* line 274, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flexslider {
+  margin: 0 0 60px;
+  position: relative;
+  zoom: 1;
+}
+
+/* line 275, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* line 276, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.loading .flex-viewport {
+  max-height: 300px;
+}
+
+/* line 277, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flexslider .slides {
+  zoom: 1;
+}
+
+/* line 278, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.carousel li {
+  margin-right: 5px;
+}
+
+/* Direction Nav */
+/* line 281, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-direction-nav {
+  *height: 0;
+}
+
+/* line 282, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-direction-nav a {
+  text-decoration: none;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  overflow: hidden;
+  opacity: 0;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+/* line 283, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-direction-nav .flex-prev {
+  left: -50px;
+}
+
+/* line 284, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-direction-nav .flex-next {
+  right: -50px;
+  text-align: right;
+}
+
+/* line 285, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flexslider:hover .flex-prev {
+  opacity: 0.7;
+  left: 10px;
+}
+
+/* line 286, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flexslider:hover .flex-next {
+  opacity: 0.7;
+  right: 10px;
+}
+
+/* line 287, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
+  opacity: 1;
+}
+
+/* line 288, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-direction-nav .flex-disabled {
+  opacity: 0 !important;
+  filter: alpha(opacity=0);
+  cursor: default;
+}
+
+/* line 289, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-direction-nav a:before {
+  font-family: "flexslider-icon";
+  font-size: 40px;
+  display: inline-block;
+  content: '\f001';
+}
+
+/* line 290, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-direction-nav a.flex-next:before {
+  content: '\f002';
+}
+
+/* Pause/Play */
+/* line 293, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-pauseplay a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  opacity: 0.8;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000;
+}
+
+/* line 294, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-pauseplay a:before {
+  font-family: "flexslider-icon";
+  font-size: 20px;
+  display: inline-block;
+  content: '\f004';
+}
+
+/* line 295, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-pauseplay a:hover {
+  opacity: 1;
+}
+
+/* line 296, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-pauseplay a.flex-play:before {
+  content: '\f003';
+}
+
+/* Control Nav */
+/* line 299, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+}
+
+/* line 300, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-control-nav li {
+  margin: 0 6px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 301, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-control-paging li a {
+  width: 11px;
+  height: 11px;
+  display: block;
+  background: #666;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-indent: -9999px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+/* line 302, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-control-paging li a:hover {
+  background: #333;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* line 303, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-control-paging li a.flex-active {
+  background: #000;
+  background: rgba(0, 0, 0, 0.9);
+  cursor: default;
+}
+
+/* line 305, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-control-thumbs {
+  margin: 5px 0 0;
+  position: static;
+  overflow: hidden;
+}
+
+/* line 306, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-control-thumbs li {
+  width: 25%;
+  float: left;
+  margin: 0;
+}
+
+/* line 307, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-control-thumbs img {
+  width: 100%;
+  display: block;
+  opacity: .7;
+  cursor: pointer;
+}
+
+/* line 308, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-control-thumbs img:hover {
+  opacity: 1;
+}
+
+/* line 309, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+.flex-control-thumbs .flex-active {
+  opacity: 1;
+  cursor: default;
+}
+
+@media screen and (max-width: 860px) {
+  /* line 312, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+  .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 10px;
+  }
+
+  /* line 313, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/owl-flexslider.scss */
+  .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 10px;
+  }
+}
+/* 
+ * 	Default theme - Owl Carousel CSS File
+ */
+/* line 4, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_owl-theme.scss */
+.owl-theme .owl-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 9, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_owl-theme.scss */
+.owl-theme .owl-nav [class*='owl-'] {
+  color: white;
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: #d6d6d6;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 21, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_owl-theme.scss */
+.owl-theme .owl-nav [class*='owl-']:hover {
+  background: #869791;
+  color: white;
+  text-decoration: none;
+}
+
+/* line 26, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_owl-theme.scss */
+.owl-theme .owl-nav .disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* line 30, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_owl-theme.scss */
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px;
+}
+
+/* line 33, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_owl-theme.scss */
+.owl-theme .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 37, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_owl-theme.scss */
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 42, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_owl-theme.scss */
+.owl-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #d6d6d6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  -webkit-transition: opacity 200ms ease;
+  -moz-transition: opacity 200ms ease;
+  -ms-transition: opacity 200ms ease;
+  -o-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+
+/* line 58, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_owl-theme.scss */
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #869791;
+}
+
+/* ====================
+4. TEMPLATE GLOBAL STYLES
+==================== */
+/* typography */
+/* line 4, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #666666;
+}
+
+/* line 9, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+/* line 14, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+p.lead {
+  font-size: 1.25em;
+  opacity: .5;
+  padding: .8em 0 0 0;
+}
+
+/* line 20, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+blockquote {
+  font-style: italic;
+  color: #b3b3b3;
+  font-size: 1.1em;
+  border-left: solid 3px #d9d9d9;
+}
+
+/* line 27, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+a {
+  color: #363B36;
+}
+/* line 30, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+a:hover {
+  color: #2a2e2a;
+}
+
+/* line 35, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+input,
+textarea,
+button {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* line 41, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+input[type="text"],
+input[type="email"],
+textarea {
+  color: #999999;
+  border: solid 2px #ebebeb !important;
+  box-shadow: none !important;
+}
+/* line 4, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/bourbon-4.2.2/app/assets/stylesheets/css3/_placeholder.scss */
+input[type="text"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+/* line 4, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/bourbon-4.2.2/app/assets/stylesheets/css3/_placeholder.scss */
+input[type="text"]::-moz-placeholder,
+input[type="email"]::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #bfbfbf;
+}
+/* line 4, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/bourbon-4.2.2/app/assets/stylesheets/css3/_placeholder.scss */
+input[type="text"]:-moz-placeholder,
+input[type="email"]:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #bfbfbf;
+}
+/* line 4, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/bourbon-4.2.2/app/assets/stylesheets/css3/_placeholder.scss */
+input[type="text"]:-ms-input-placeholder,
+input[type="email"]:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+/* line 52, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border: solid 2px #cccccc !important;
+}
+
+/* layout */
+/* line 58, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+.container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 .5em;
+}
+/* line 20, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/bourbon-4.2.2/app/assets/stylesheets/addons/_clearfix.scss */
+.container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/* line 63, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+html, body, section.intro, .split, .split-text {
+  height: 100%;
+}
+
+/* line 67, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+section {
+  padding: 6em 0 3em;
+  position: relative;
+}
+
+/* parallax backgrounds */
+/* line 73, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+.image-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -200;
+}
+
+/* line 83, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+.color-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #363B36;
+  opacity: 0.7;
+  z-index: -100;
+}
+
+/* title section */
+/* line 95, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 3em;
+}
+/* line 104, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+.title hr {
+  border: solid 2px rgba(0, 0, 0, 0.1);
+  margin: 1em auto 1.5em;
+}
+/* line 108, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+.title hr.small {
+  width: 50px;
+}
+/* line 113, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+.title p {
+  opacity: 0.5;
+  font-size: 1.25em;
+}
+
+/* buttons */
+/* line 120, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+a.button.alt,
+a.button.large.alt {
+  background: #363B36;
+}
+/* line 124, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+a.button.alt:hover,
+a.button.large.alt:hover {
+  background: #495049;
+}
+
+/* line 129, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+a.button.large {
+  background: #363B36;
+  text-transform: uppercase;
+  margin-top: 1em;
+  padding: 1em 2em;
+}
+/* line 135, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+a.button.large:hover {
+  background: #495049;
+}
+
+/* owl carousel styles */
+/* line 141, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+.owl-theme .owl-dots .owl-dot span {
+  height: 14px;
+  width: 14px;
+}
+
+/* line 146, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+.owl-theme .owl-nav [class*='owl-'] {
+  padding: .5em 1em;
+}
+
+/* line 150, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+.owl-carousel {
+  cursor: move;
+}
+
+/* flexslider */
+/* line 155, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+.flexslider {
+  margin: 0;
+}
+
+/* line 159, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+.flex-control-nav {
+  bottom: 0;
+  z-index: 100;
+}
+/* line 163, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+.flex-control-nav li a {
+  background: white;
+  opacity: 0.5;
+  height: 14px;
+  width: 14px;
+  box-shadow: none;
+}
+/* line 170, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+.flex-control-nav li a:hover {
+  opacity: 0.7;
+}
+/* line 174, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+.flex-control-nav li a.flex-active {
+  background: white;
+  opacity: 1;
+}
+
+/* line 181, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+.flex-direction-nav a {
+  height: 52px;
+  width: 52px;
+  top: 45%;
+  font-weight: bold;
+  box-shadow: none;
+  text-shadow: none;
+  color: white;
+}
+/* line 190, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+.flex-direction-nav a:before {
+  font-family: 'Fontawesome';
+  font-size: 3em;
+  display: inline-block;
+  content: '\f104';
+}
+/* line 197, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_globals.scss */
+.flex-direction-nav a.flex-next:before {
+  content: '\f105';
+}
+
+/* ====================
+ 5. HEADER
+==================== */
+/* line 4, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation.headroom--unpinned {
+  transform: translateY(-100%);
+}
+/* line 7, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation.headroom--pinned {
+  transform: translateY(0%);
+}
+/* line 22, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation.headroom {
+  position: fixed;
+  background-color: white;
+  border-bottom: 1px solid #e6e6e6;
+  height: 6em;
+  width: 100%;
+  z-index: 999;
+  transition: transform 200ms linear;
+}
+/* line 32, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation.headroom .navigation-wrapper {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 9999;
+}
+/* line 20, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/bourbon-4.2.2/app/assets/stylesheets/addons/_clearfix.scss */
+header.navigation.headroom .navigation-wrapper::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 20, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/bourbon-4.2.2/app/assets/stylesheets/addons/_clearfix.scss */
+header.navigation.headroom .navigation-wrapper::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 39, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation.headroom .logo {
+  float: left;
+  max-height: 6em;
+  padding-left: 1em;
+  padding-right: 2em;
+}
+/* line 45, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation.headroom .logo img {
+  max-height: 6em;
+  padding: 1.7em 0;
+}
+/* line 54, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation.headroom .navigation-menu-button {
+  color: #b3b3b3;
+  display: block;
+  float: right;
+  font-family: sans-serif;
+  font-weight: 700;
+  line-height: 6em;
+  margin: 0;
+  padding-right: 1em;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 54, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+  header.navigation.headroom .navigation-menu-button {
+    display: none;
+  }
+}
+/* line 69, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation.headroom .navigation-menu-button:hover {
+  color: #363B36;
+}
+/* line 77, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation.headroom .nav {
+  z-index: 9999999;
+  float: none;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 77, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+  header.navigation.headroom .nav {
+    float: right;
+  }
+}
+/* line 86, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation.headroom ul#navigation-menu {
+  -webkit-transform-style: preserve-3d;
+  clear: both;
+  display: none;
+  margin: 0 auto;
+  overflow: visible;
+  padding: 0;
+  width: 100%;
+  z-index: 9999;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 86, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+  header.navigation.headroom ul#navigation-menu {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+}
+/* line 107, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation.headroom ul li.nav-link {
+  background: #f2f2f2;
+  display: block;
+  line-height: 6em;
+  overflow: hidden;
+  padding-left: 2em;
+  text-align: right;
+  width: 100%;
+  z-index: 9999;
+}
+@media screen and (max-width: 53.75em) {
+  /* line 107, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+  header.navigation.headroom ul li.nav-link {
+    padding-left: 0;
+    text-align: center;
+    border-bottom: solid 1px #e6e6e6;
+  }
+}
+@media screen and (min-width: 53.75em) {
+  /* line 107, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+  header.navigation.headroom ul li.nav-link {
+    background: transparent;
+    display: inline;
+    line-height: 6em;
+    text-decoration: none;
+    width: auto;
+  }
+}
+/* line 132, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation.headroom ul li.nav-link.active a {
+  color: #363B36;
+}
+/* line 136, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation.headroom ul li.nav-link a {
+  display: inline-block;
+  font-weight: 400;
+  color: #b3b3b3;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 136, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+  header.navigation.headroom ul li.nav-link a {
+    padding-right: 1em;
+  }
+}
+/* line 145, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation.headroom ul li.nav-link a:hover {
+  color: #363B36;
+}
+@media screen and (max-width: 53.75em) {
+  /* line 136, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+  header.navigation.headroom ul li.nav-link a {
+    display: block;
+  }
+}
+/* line 158, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation li.more.nav-link {
+  padding-right: 0;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 158, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+  header.navigation li.more.nav-link {
+    padding-right: 1em;
+  }
+}
+/* line 165, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation li.more.nav-link > ul > li:first-child a {
+  padding-top: 1em;
+}
+/* line 169, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation li.more.nav-link a {
+  margin-right: 1em;
+}
+@media screen and (max-width: 53.75em) {
+  /* line 169, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+  header.navigation li.more.nav-link a {
+    margin-right: 0;
+    padding: 0;
+    text-align: center;
+  }
+}
+/* line 179, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation li.more.nav-link > a {
+  padding-right: 0.6em;
+}
+/* line 183, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation li.more.nav-link > a:after {
+  position: absolute;
+  top: auto;
+  right: -0.4em;
+  bottom: auto;
+  left: auto;
+  content: '\25BE';
+  color: #b3b3b3;
+}
+/* line 190, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation li.more {
+  overflow: visible;
+  padding-right: 0;
+}
+/* line 194, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation li.more a {
+  padding-right: .8em;
+}
+/* line 198, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation li.more > a {
+  padding-right: 1.6em;
+  position: relative;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 198, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+  header.navigation li.more > a {
+    margin-right: 1em;
+  }
+}
+/* line 206, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation li.more > a:after {
+  content: '›';
+  font-size: 1.2em;
+  position: absolute;
+  right: 0.5em;
+}
+/* line 214, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation li.more:hover > .submenu {
+  display: block;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 190, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+  header.navigation li.more {
+    padding-right: .8em;
+    position: relative;
+  }
+}
+/* line 224, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation ul.submenu {
+  display: none;
+  padding-left: 0;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 224, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+  header.navigation ul.submenu {
+    position: absolute;
+    top: 2.5em;
+    left: 0;
+  }
+}
+@media screen and (min-width: 53.75em) {
+  /* line 234, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+  header.navigation ul.submenu .submenu {
+    left: 11.8em;
+    top: 0;
+  }
+}
+/* line 241, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation ul.submenu li {
+  display: block;
+  padding-right: 0;
+}
+@media screen and (max-width: 53.75em) {
+  /* line 241, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+  header.navigation ul.submenu li {
+    padding-left: 0;
+    text-align: center;
+    border-bottom: solid 1px #dedede;
+  }
+}
+@media screen and (min-width: 53.75em) {
+  /* line 241, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+  header.navigation ul.submenu li {
+    line-height: 3.5em;
+  }
+  /* line 254, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+  header.navigation ul.submenu li:first-child > a {
+    border-top-left-radius: 0.1875em;
+    border-top-right-radius: 0.1875em;
+  }
+  /* line 259, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+  header.navigation ul.submenu li:last-child > a {
+    border-bottom-left-radius: 0.1875em;
+    border-bottom-right-radius: 0.1875em;
+    padding-bottom: 1.2em;
+  }
+}
+/* line 266, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+header.navigation ul.submenu li a {
+  background-color: #ebebeb;
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 266, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+  header.navigation ul.submenu li a {
+    padding: 0;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 53.75em) {
+  /* line 266, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_header.scss */
+  header.navigation ul.submenu li a {
+    background-color: #f2f2f2;
+    padding-left: 1em;
+    text-align: left;
+    width: 12em;
+  }
+}
+
+/* ====================
+6. INTRO SECTION
+==================== */
+/* line 2, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_intro.scss */
+section.intro {
+  padding: 0;
+  color: white;
+  text-transform: uppercase;
+}
+/* line 7, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_intro.scss */
+section.intro .image-bg {
+  background: url("http://i59.tinypic.com/2dgmbnc.jpg") 0 0 no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 30em) {
+  /* line 13, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_intro.scss */
+  section.intro .container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+@media screen and (max-width: 30em) {
+  /* line 13, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_intro.scss */
+  section.intro .container {
+    padding-top: 8em;
+  }
+}
+/* line 25, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_intro.scss */
+section.intro h1 {
+  text-align: center;
+  color: white;
+  padding-bottom: .5em;
+}
+/* line 30, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_intro.scss */
+section.intro h1 img {
+  max-width: 50%;
+}
+/* line 35, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_intro.scss */
+section.intro h3 {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0 20%;
+}
+/* line 41, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_intro.scss */
+section.intro a.jump-down {
+  position: absolute;
+  bottom: 4em;
+  left: 20%;
+  right: 20%;
+  margin: 2em auto 0;
+  display: block;
+  width: 4em;
+  text-align: center;
+}
+/* line 51, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_intro.scss */
+section.intro a.jump-down i {
+  color: white;
+  opacity: 0.5;
+  font-size: 3.5em;
+  text-align: center;
+  transition: opacity 0.2s;
+}
+/* line 58, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_intro.scss */
+section.intro a.jump-down i:hover {
+  opacity: 1;
+}
+
+/* ====================
+7. FEATURES SECTION
+==================== */
+/* line 4, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_features.scss */
+.features .feature-item {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  padding: 3em 0 2em;
+  text-align: center;
+}
+/* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+.features .feature-item:last-child {
+  margin-right: 0;
+}
+@media screen and (min-width: medium-screen-up) {
+  /* line 4, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_features.scss */
+  .features .feature-item {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+  }
+  /* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+  .features .feature-item:last-child {
+    margin-right: 0;
+  }
+  /* line 78, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_omega.scss */
+  .features .feature-item:nth-child(2n) {
+    margin-right: 0;
+  }
+  /* line 83, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_omega.scss */
+  .features .feature-item:nth-child(2n+1) {
+    clear: left;
+  }
+}
+@media screen and (min-width: 53.75em) {
+  /* line 4, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_features.scss */
+  .features .feature-item {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  /* line 18, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/mixins/_flash.scss */
+  .features .feature-item:nth-child(2n) {
+    margin-right: 2.35765%;
+  }
+  /* line 19, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/base/mixins/_flash.scss */
+  .features .feature-item:nth-child(2n+1) {
+    clear: none;
+  }
+  /* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+  .features .feature-item:last-child {
+    margin-right: 0;
+  }
+  /* line 78, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_omega.scss */
+  .features .feature-item:nth-child(3n) {
+    margin-right: 0;
+  }
+  /* line 83, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_omega.scss */
+  .features .feature-item:nth-child(3n+1) {
+    clear: left;
+  }
+}
+/* line 29, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_features.scss */
+.features .feature-item h4 {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  padding-bottom: .5em;
+}
+/* line 35, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_features.scss */
+.features .feature-item p {
+  color: gray;
+}
+/* line 39, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_features.scss */
+.features .feature-item i {
+  font-size: 4em;
+  color: #cccccc;
+  margin-bottom: .3em;
+  transition: color .2s;
+}
+/* line 46, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_features.scss */
+.features .feature-item:hover i {
+  color: #288C14;
+}
+
+/* ====================
+8. NEWSLETTER SECTION
+==================== */
+/* line 2, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_newsletter.scss */
+.newsletter {
+  padding: 5em 0;
+  color: white;
+}
+/* line 6, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_newsletter.scss */
+.newsletter .image-bg {
+  background: url("http://i61.tinypic.com/4hecqq.jpg") 0 0 no-repeat;
+  background-size: cover;
+}
+/* line 12, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_newsletter.scss */
+.newsletter .nl-text,
+.newsletter .nl-form {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+/* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+.newsletter .nl-text:last-child,
+.newsletter .nl-form:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 53.75em) {
+  /* line 12, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_newsletter.scss */
+  .newsletter .nl-text,
+  .newsletter .nl-form {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 1em 5%;
+  }
+  /* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+  .newsletter .nl-text:last-child,
+  .newsletter .nl-form:last-child {
+    margin-right: 0;
+  }
+}
+/* line 24, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_newsletter.scss */
+.newsletter .nl-text p {
+  margin-bottom: 0;
+}
+/* line 29, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_newsletter.scss */
+.newsletter .nl-form {
+  margin-right: 0;
+}
+/* line 33, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_newsletter.scss */
+.newsletter .nl-form input[type="email"] {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 57.35098%;
+  padding: 0 1em;
+  box-shadow: none;
+  border: none !important;
+  border-radius: 3px 0 0 3px;
+  height: 3em;
+  margin: 0;
+}
+@media screen and (max-width: 37.5em) {
+  /* line 33, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_newsletter.scss */
+  .newsletter .nl-form input[type="email"] {
+    float: left;
+    display: block;
+    margin-right: 7.42297%;
+    width: 100%;
+    width: 100%;
+    border-radius: 3px;
+  }
+  /* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+  .newsletter .nl-form input[type="email"]:last-child {
+    margin-right: 0;
+  }
+}
+/* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+.newsletter .nl-form input[type="email"]:last-child {
+  margin-right: 0;
+}
+/* line 50, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_newsletter.scss */
+.newsletter .nl-form input[type="submit"] {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 40.29137%;
+  margin-right: 0;
+  height: 3em;
+  border-radius: 0 3px 3px 0;
+  background: #1a741b;
+  text-transform: uppercase;
+  margin: 0;
+}
+@media screen and (max-width: 37.5em) {
+  /* line 50, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_newsletter.scss */
+  .newsletter .nl-form input[type="submit"] {
+    float: left;
+    display: block;
+    margin-right: 7.42297%;
+    width: 100%;
+    width: 100%;
+    margin-top: 1em;
+    border-radius: 3px;
+  }
+  /* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+  .newsletter .nl-form input[type="submit"]:last-child {
+    margin-right: 0;
+  }
+}
+/* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+.newsletter .nl-form input[type="submit"]:last-child {
+  margin-right: 0;
+}
+/* line 68, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_newsletter.scss */
+.newsletter .nl-form input[type="submit"]:hover {
+  background: #1e8920;
+}
+
+/* ====================
+9. SHOWCASE SECTION
+==================== */
+/* line 1, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.baseline {
+  padding: 1em;
+  margin-bottom: 4em;
+  margin-top: 1em;
+}
+
+/* line 7, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.baseline > div {
+  width: 25%;
+  float: left;
+  padding: 0em 1em;
+}
+
+/* line 13, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+#baselinecalcvalue {
+  margin-top: 1em;
+}
+
+/* line 18, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+h4 {
+  text-align: center;
+}
+
+/* line 22, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+th {
+  text-align: center;
+}
+
+/* line 26, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+td {
+  text-align: center;
+}
+
+/* line 31, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+#section-showcase {
+  padding: 6em 0 5em;
+}
+
+/* line 34, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.chart {
+  padding: 1em 0 5em;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-style: solid;
+  border-width: 2px;
+  -webkit-box-shadow: 5px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 5px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 5px 3px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+/* line 49, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.showcase {
+  padding: 1em 0 5em;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 56, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.showcase .split {
+  margin: 5em 0 0 0;
+}
+/* line 20, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/bourbon-4.2.2/app/assets/stylesheets/addons/_clearfix.scss */
+.showcase .split::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 61, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.showcase .split .split-left,
+.showcase .split .split-right {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+/* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+.showcase .split .split-left:last-child,
+.showcase .split .split-right:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 53.75em) {
+  /* line 61, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+  .showcase .split .split-left,
+  .showcase .split .split-right {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 1em 3em;
+    text-align: center;
+    float: none !important;
+  }
+  /* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+  .showcase .split .split-left:last-child,
+  .showcase .split .split-right:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 30em) {
+  /* line 61, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+  .showcase .split .split-left,
+  .showcase .split .split-right {
+    padding: 10px;
+  }
+}
+/* line 76, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.showcase .split .split-table {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+/* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+.showcase .split .split-table:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 53.75em) {
+  /* line 76, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+  .showcase .split .split-table {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 1em 3em;
+    text-align: center;
+    float: none !important;
+  }
+  /* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+  .showcase .split .split-table:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 30em) {
+  /* line 76, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+  .showcase .split .split-table {
+    padding: 10px;
+  }
+}
+/* line 88, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.showcase .split .split-left.float-right {
+  float: right;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 91, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+  .showcase .split .split-left.float-right.split-text {
+    padding-left: 1.5em;
+  }
+}
+/* line 99, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.showcase .split .split-right.float-left {
+  float: left;
+}
+/* line 105, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.showcase .split .split-media #showcase-slider .item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: move;
+}
+/* line 113, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.showcase .split .img {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  margin-bottom: 1em;
+}
+/* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+.showcase .split .img:last-child {
+  margin-right: 0;
+}
+/* line 78, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_omega.scss */
+.showcase .split .img:nth-child(5n) {
+  margin-right: 0;
+}
+/* line 83, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_omega.scss */
+.showcase .split .img:nth-child(5n+1) {
+  clear: left;
+}
+
+/* line 121, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.showcase.gray {
+  background: #f2f2f2;
+}
+
+/* line 125, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.table-minimal {
+  border: 1px solid silver;
+  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+/* line 146, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.table-minimal th {
+  text-align: left;
+}
+/* line 150, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.table-minimal td {
+  line-height: 1.5em;
+}
+/* line 168, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.table-minimal table {
+  border: 1px solid silver;
+  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
+}
+/* line 174, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.table-minimal tbody tr:hover > td, .table-minimal tbody tr:hover > th {
+  background-color: #fafafa;
+}
+/* line 177, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.table-minimal tbody tr:first-child td {
+  border-top: 2px solid #DDD;
+}
+/* line 183, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.table-minimal thead th {
+  background-color: white;
+  border-bottom: 0px;
+  padding: 0.75em 1em;
+}
+/* line 190, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.table-minimal tbody {
+  background-color: white;
+}
+/* line 193, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.table-minimal tbody td {
+  border-bottom: 0px;
+  border-top: 1px solid #DDD;
+  padding: 0.75em 1em;
+}
+/* line 198, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+.table-minimal tbody td button {
+  background-color: #2ecc71;
+  border-radius: 3px;
+  border: 0;
+  color: #333333;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 7px 18px;
+  text-decoration: none;
+  background-clip: padding-box;
+  display: inline-block;
+  font-size: .7em;
+  line-height: 1.5em;
+  margin-bottom: .3em;
+  margin-right: 0.5em;
+  outline: none;
+  padding: .3em 1em;
+  width: 100%;
+}
+/* line 354, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/bourbon-4.2.2/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+.table-minimal tbody td button:hover:not(:disabled) {
+  background-color: #3bd97e;
+  cursor: pointer;
+}
+/* line 365, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/bourbon-4.2.2/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+.table-minimal tbody td button:active:not(:disabled), .table-minimal tbody td button:focus:not(:disabled) {
+  background-color: #2eb366;
+  cursor: pointer;
+}
+/* line 59, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/bourbon-4.2.2/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss */
+.table-minimal tbody td button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+@media screen and (min-width: 37.5em) {
+  /* line 198, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_showcase.scss */
+  .table-minimal tbody td button {
+    margin-bottom: 0;
+    width: auto;
+  }
+}
+
+/* ====================
+10. QUOTE / TESTIMONIALS
+==================== */
+/* line 2, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_quote.scss */
+section.quote {
+  padding: 6em 0;
+}
+/* line 5, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_quote.scss */
+section.quote .image-bg {
+  background: url("http://i61.tinypic.com/4hecqq.jpg") 0 0 no-repeat;
+  background-size: cover;
+}
+/* line 13, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_quote.scss */
+section.quote #quote-slider .owl-dots {
+  margin-top: 2em;
+}
+/* line 18, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_quote.scss */
+section.quote #quote-slider .owl-dots .owl-dot span {
+  background-color: white;
+  opacity: 0.4;
+}
+/* line 22, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_quote.scss */
+section.quote #quote-slider .owl-dots .owl-dot span:hover {
+  opacity: 0.7;
+}
+/* line 27, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_quote.scss */
+section.quote #quote-slider .owl-dots .owl-dot.active span {
+  opacity: 1;
+}
+/* line 34, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_quote.scss */
+section.quote blockquote {
+  text-align: center;
+  font-style: normal;
+  color: white;
+  font-size: 2em;
+  margin: 0;
+  border: 0;
+  padding-left: 0;
+  cursor: move;
+}
+@media screen and (max-width: 37.5em) {
+  /* line 34, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_quote.scss */
+  section.quote blockquote {
+    padding: 0 10px;
+    font-size: 1.6em;
+  }
+}
+@media screen and (max-width: 30em) {
+  /* line 34, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_quote.scss */
+  section.quote blockquote {
+    font-size: 1.3em;
+  }
+}
+/* line 52, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_quote.scss */
+section.quote blockquote cite {
+  padding-top: 1.5em;
+  font-size: .6em;
+  color: white;
+  display: block;
+}
+@media screen and (max-width: 37.5em) {
+  /* line 52, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_quote.scss */
+  section.quote blockquote cite {
+    font-size: .7em;
+  }
+}
+/* line 63, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_quote.scss */
+section.quote blockquote cite a {
+  color: #050605;
+}
+/* line 66, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_quote.scss */
+section.quote blockquote cite a:hover {
+  color: black;
+}
+
+/* ====================
+11. BLOG SECTION
+==================== */
+/* line 2, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+section.blog {
+  background: #f2f2f2;
+  text-align: center;
+}
+/* line 8, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+section.blog #blog-teasers .blog-item {
+  padding: 0 1em;
+  margin-bottom: 1em;
+  cursor: move;
+}
+/* line 16, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+section.blog #blog-teasers .blog-item:hover a.featured-image {
+  background: #363B36;
+}
+/* line 20, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+section.blog #blog-teasers .blog-item:hover .blog-teaser {
+  background: #fcfcfc;
+}
+/* line 24, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+section.blog #blog-teasers .blog-item:hover img {
+  opacity: 0.8;
+}
+/* line 28, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+section.blog #blog-teasers .blog-item:hover .flexslider img {
+  opacity: 1;
+}
+/* line 33, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+section.blog #blog-teasers .blog-item a.featured-image {
+  display: block;
+}
+/* line 36, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+section.blog #blog-teasers .blog-item a.featured-image img {
+  transition: all 0.5s;
+  -webkit-backface-visibility: hidden;
+}
+/* line 42, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+section.blog #blog-teasers .blog-item .blog-teaser {
+  padding: 1.5em;
+  background: white;
+  border-top: 0;
+  transition: all 0.2s;
+}
+/* line 50, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+section.blog #blog-teasers .blog-item .blog-teaser h4.post-title a {
+  color: #666666;
+}
+/* line 54, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+section.blog #blog-teasers .blog-item .blog-teaser .meta {
+  color: #b3b3b3;
+  padding-bottom: .6em;
+  font-size: .9em;
+}
+/* line 60, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+section.blog #blog-teasers .blog-item .blog-teaser.audio {
+  margin-top: -7px;
+}
+/* line 65, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+section.blog #blog-teasers .blog-item h4 {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  padding-bottom: .5em;
+}
+/* line 71, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+section.blog #blog-teasers .blog-item p {
+  color: gray;
+}
+/* line 75, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+section.blog #blog-teasers .blog-item i {
+  font-size: 4em;
+  color: #cccccc;
+  margin-bottom: .3em;
+  transition: color .2s;
+}
+/* line 82, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+section.blog #blog-teasers .blog-item:hover i {
+  color: #363B36;
+}
+/* line 88, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+section.blog a.button {
+  text-align: center;
+  padding: 1em 2em;
+  margin: 1em auto;
+  text-transform: uppercase;
+}
+
+/* blog single page */
+/* line 2, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+.blog-single {
+  padding: 9em 0 3em;
+}
+
+/* line 6, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+article.article-column,
+.main-column {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+}
+/* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+article.article-column:last-child,
+.main-column:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 53.75em) {
+  /* line 6, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+  article.article-column,
+  .main-column {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+  article.article-column:last-child,
+  .main-column:last-child {
+    margin-right: 0;
+  }
+}
+/* line 13, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+article.article-column .title,
+.main-column .title {
+  text-align: left;
+  margin-bottom: 0;
+}
+/* line 17, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+article.article-column .title h2,
+.main-column .title h2 {
+  padding-bottom: .4em;
+}
+/* line 21, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+article.article-column .title hr.small,
+.main-column .title hr.small {
+  margin-left: 0;
+}
+/* line 26, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+article.article-column .meta,
+.main-column .meta {
+  font-size: .9em;
+  margin-bottom: 1em;
+  color: #b3b3b3;
+  padding: .5em 0;
+  border-top: solid 3px #f2f2f2;
+  border-bottom: solid 3px #f2f2f2;
+}
+/* line 35, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+article.article-column .post-intro,
+.main-column .post-intro {
+  text-transform: uppercase;
+  font-size: 1.4em;
+  color: #b3b3b3;
+}
+/* line 41, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+article.article-column .media,
+.main-column .media {
+  margin-bottom: 2em;
+}
+/* line 45, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+article.article-column .post-tags,
+.main-column .post-tags {
+  border-top: solid 4px #f2f2f2;
+  border-bottom: solid 4px #f2f2f2;
+  margin: 2em 0;
+  padding: 1em 0;
+}
+/* line 51, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+article.article-column .post-tags h3,
+.main-column .post-tags h3 {
+  float: left;
+  font-size: 1em;
+  padding-right: 1em;
+  padding-top: .6em;
+}
+/* line 58, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+article.article-column .post-tags span,
+.main-column .post-tags span {
+  margin-bottom: .2em;
+  display: inline-block;
+}
+/* line 62, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+article.article-column .post-tags span a,
+.main-column .post-tags span a {
+  color: #666666;
+  background: #f2f2f2;
+  display: block;
+  padding: .5em;
+  font-size: .9em;
+}
+/* line 69, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+article.article-column .post-tags span a:hover,
+.main-column .post-tags span a:hover {
+  background: #e6e6e6;
+}
+
+/* sidebar widgets */
+/* line 78, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+aside.sidebar {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+}
+/* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+aside.sidebar:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 53.75em) {
+  /* line 78, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+  aside.sidebar {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 2em 20% 0;
+  }
+  /* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+  aside.sidebar:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 30em) {
+  /* line 78, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+  aside.sidebar {
+    float: left;
+    display: block;
+    margin-right: 7.42297%;
+    width: 314.84594%;
+    padding: 1em 3% 0;
+  }
+  /* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+  aside.sidebar:last-child {
+    margin-right: 0;
+  }
+}
+/* line 90, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+aside.sidebar .widget-wrapper {
+  margin-bottom: 3em;
+}
+/* line 93, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+aside.sidebar .widget-wrapper .widget-title {
+  padding-bottom: .5em;
+  margin-bottom: 1em;
+  border-bottom: solid 4px #f2f2f2;
+}
+/* line 99, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+aside.sidebar .widget-wrapper ul.blog-categories li {
+  border-bottom: solid 1px #f2f2f2;
+}
+/* line 102, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+aside.sidebar .widget-wrapper ul.blog-categories li:before {
+  content: '\f105';
+  font-family: 'Fontawesome';
+  float: left;
+  padding: .5em;
+}
+/* line 109, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+aside.sidebar .widget-wrapper ul.blog-categories li:hover {
+  background: #f7f7f7;
+}
+/* line 113, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+aside.sidebar .widget-wrapper ul.blog-categories li a {
+  color: #666666;
+  text-transform: uppercase;
+  display: block;
+  padding: .5em;
+}
+/* line 120, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+aside.sidebar .widget-wrapper ul.blog-categories li:hover {
+  color: gray;
+}
+/* line 127, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+aside.sidebar .widget-wrapper .blog-tags span {
+  margin-bottom: .2em;
+  display: inline-block;
+}
+/* line 132, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+aside.sidebar .widget-wrapper .blog-tags span a {
+  color: #666666;
+  background: #f2f2f2;
+  display: block;
+  padding: .5em;
+  font-size: .9em;
+}
+/* line 139, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+aside.sidebar .widget-wrapper .blog-tags span a:hover {
+  background: #e6e6e6;
+}
+
+/* line 148, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+.quote-format {
+  background: #363B36;
+  padding: 1.5em;
+}
+/* line 152, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+.quote-format blockquote {
+  font-size: 1.2em;
+  color: white;
+  border-left: 0;
+  padding: 0;
+  margin: 0;
+}
+/* line 159, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+.quote-format blockquote cite {
+  display: block;
+  color: white;
+  opacity: 0.8;
+  padding-top: 1em;
+  font-size: 0.8em;
+}
+
+/* author box */
+/* line 170, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+.author-box {
+  margin-bottom: 2em;
+  padding: 1.5em;
+  background: #f2f2f2;
+}
+/* line 175, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+.author-box .author-avatar {
+  float: left;
+}
+/* line 178, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+.author-box .author-avatar img {
+  border-radius: 3px;
+}
+/* line 183, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+.author-box .author-bio {
+  margin-left: 6.5em;
+}
+/* line 186, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+.author-box .author-bio a {
+  color: #666666;
+}
+/* line 190, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-single.scss */
+.author-box .author-bio h3 {
+  font-size: 1.2em;
+  padding-bottom: .5em;
+}
+
+/* blog archive page */
+/* line 3, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+.blog-archive {
+  padding: 9em 0 3em 0;
+}
+
+/* line 9, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+.main-column .blog-item {
+  margin-bottom: 1em;
+}
+/* line 20, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/bourbon-4.2.2/app/assets/stylesheets/addons/_clearfix.scss */
+.main-column .blog-item::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+@media screen and (max-width: 37.5em) {
+  /* line 9, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+  .main-column .blog-item {
+    margin-bottom: 2em;
+  }
+}
+/* line 16, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+.main-column .blog-item .media {
+  float: left;
+  display: block;
+  margin-right: 3.16844%;
+  width: 42.6842%;
+  transition: all 0.2s;
+}
+/* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+.main-column .blog-item .media:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 37.5em) {
+  /* line 16, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+  .main-column .blog-item .media {
+    float: left;
+    display: block;
+    margin-right: 7.42297%;
+    width: 314.84594%;
+  }
+  /* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+  .main-column .blog-item .media:last-child {
+    margin-right: 0;
+  }
+}
+/* line 23, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+.main-column .blog-item .media:hover {
+  opacity: 0.9;
+}
+/* line 28, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+.main-column .blog-item .blog-teaser {
+  float: left;
+  display: block;
+  margin-right: 3.16844%;
+  width: 54.14736%;
+}
+/* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+.main-column .blog-item .blog-teaser:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 37.5em) {
+  /* line 28, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+  .main-column .blog-item .blog-teaser {
+    float: left;
+    display: block;
+    margin-right: 7.42297%;
+    width: 314.84594%;
+  }
+  /* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+  .main-column .blog-item .blog-teaser:last-child {
+    margin-right: 0;
+  }
+}
+/* line 34, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+.main-column .blog-item .blog-teaser .post-title a {
+  color: #666666;
+}
+/* line 38, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+.main-column .blog-item .blog-teaser .meta {
+  margin-top: .8em;
+}
+
+/* line 47, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+.pagination {
+  text-align: center;
+  margin-bottom: 2em;
+}
+/* line 56, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+.pagination ul {
+  display: inline;
+  text-align: center;
+}
+/* line 60, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+.pagination ul li {
+  display: inline;
+}
+/* line 64, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+.pagination ul ul li {
+  display: none;
+}
+/* line 67, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+.pagination ul ul li:nth-child(1), .pagination ul ul li:nth-child(2), .pagination ul ul li:nth-child(3) {
+  display: inline;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 64, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+  .pagination ul ul li {
+    display: inline;
+  }
+}
+/* line 78, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+.pagination ul li a {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background: #f7f7f7;
+  border-radius: 0.1875em;
+  border: none;
+  color: #666666;
+  padding: .5em 1em;
+}
+/* line 86, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+.pagination ul li a:hover, .pagination ul li a:focus {
+  background: white;
+  color: #2ecc71;
+}
+/* line 92, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+.pagination ul li a:active {
+  background: #f7f7f7;
+}
+/* line 97, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-archive.scss */
+.pagination ul li.active a {
+  background: #b3b3b3;
+  color: white;
+}
+
+/* blog comments */
+/* line 3, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+ul.comments {
+  padding-bottom: 1em;
+}
+
+/* line 7, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+.comment {
+  display: table;
+  width: 100%;
+  margin-bottom: 1.5em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+}
+/* line 22, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+.comment.level-1 {
+  padding-left: 3em;
+}
+/* line 26, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+.comment.level-2 {
+  padding-left: 6em;
+}
+/* line 30, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+.comment .comment-image,
+.comment .comment-content {
+  display: table-cell;
+  vertical-align: top;
+}
+/* line 36, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+.comment .comment-image {
+  padding-right: 1.5em;
+}
+/* line 39, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+.comment .comment-image > img {
+  width: 5em;
+  height: auto;
+  border-radius: 0.1875em;
+  padding: 0;
+  background: #69dd9a;
+  display: block;
+  max-width: none;
+}
+/* line 49, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+.comment-reverse-order .comment .comment-image {
+  padding-right: 0;
+  padding-left: 10px;
+}
+/* line 55, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+.comment .comment-content {
+  width: 100%;
+}
+/* line 58, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+.comment .comment-content h2 {
+  font-size: 1.1em;
+  margin-bottom: .5em;
+}
+/* line 62, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+.comment .comment-content h2 a {
+  color: #666666;
+}
+/* line 67, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+.comment .comment-content p {
+  margin-bottom: .5em;
+}
+/* line 71, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+.comment .comment-content p.comment-detail {
+  font-style: italic;
+  font-size: .9em;
+  color: rgba(51, 51, 51, 0.5);
+}
+
+/* the comment form */
+/* line 20, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/bourbon-4.2.2/app/assets/stylesheets/addons/_clearfix.scss */
+#comment-form .form::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 83, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+#comment-form .form .form-left,
+#comment-form .form .form-right {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+/* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+#comment-form .form .form-left:last-child,
+#comment-form .form .form-right:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 53.75em) {
+  /* line 83, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+  #comment-form .form .form-left,
+  #comment-form .form .form-right {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 0 5%;
+  }
+  /* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+  #comment-form .form .form-left:last-child,
+  #comment-form .form .form-right:last-child {
+    margin-right: 0;
+  }
+}
+/* line 93, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+#comment-form .form label {
+  display: none;
+}
+/* line 97, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+#comment-form .form input {
+  height: 3em;
+  margin-bottom: 1em;
+  padding: 0 1em;
+}
+/* line 103, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+#comment-form .form textarea {
+  padding: 1em;
+  height: 11em;
+}
+
+/* line 109, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+p.submit {
+  margin: 0 auto;
+  display: block;
+  margin-top: -1em;
+}
+/* line 114, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+p.submit input {
+  background: #363B36;
+  padding: 1em 2em;
+  text-transform: uppercase;
+}
+/* line 119, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog-comments.scss */
+p.submit input:hover {
+  background: #424842;
+}
+
+/* line 102, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+body {
+  padding-top: 20px;
+}
+
+/* line 103, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+.carousel {
+  margin-bottom: 0;
+  padding: 0 40px 30px 40px;
+}
+
+/* The controlsy */
+/* line 108, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+.carousel-control {
+  left: -12px;
+  height: 40px;
+  width: 40px;
+  background: none repeat scroll 0 0 #222222;
+  border: 4px solid #FFFFFF;
+  border-radius: 23px 23px 23px 23px;
+  margin-top: 90px;
+}
+
+/* line 117, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+.carousel-control.right {
+  right: -12px;
+}
+
+/* The indicators */
+/* line 121, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+.carousel-indicators {
+  right: 50%;
+  top: auto;
+  bottom: -10px;
+  margin-right: -19px;
+}
+
+/* The colour of the indicators */
+/* line 128, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+.carousel-indicators li {
+  background: #cecece;
+}
+
+/* line 131, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_blog.scss */
+.carousel-indicators .active {
+  background: #428bca;
+}
+
+/* ====================
+12. CONTACT SECTION
+==================== */
+/* line 4, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_contact.scss */
+.contact .form {
+  padding-bottom: 1em;
+}
+/* line 20, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/bourbon-4.2.2/app/assets/stylesheets/addons/_clearfix.scss */
+.contact .form::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 8, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_contact.scss */
+.contact .form .form-left,
+.contact .form .form-right {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+/* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+.contact .form .form-left:last-child,
+.contact .form .form-right:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 53.75em) {
+  /* line 8, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_contact.scss */
+  .contact .form .form-left,
+  .contact .form .form-right {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 0 5%;
+  }
+  /* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+  .contact .form .form-left:last-child,
+  .contact .form .form-right:last-child {
+    margin-right: 0;
+  }
+}
+/* line 18, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_contact.scss */
+.contact .form label {
+  display: none;
+}
+/* line 22, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_contact.scss */
+.contact .form input {
+  height: 3em;
+  margin-bottom: 1em;
+  padding: 0 1em;
+}
+/* line 28, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_contact.scss */
+.contact .form textarea {
+  padding: 1em;
+  height: 11em;
+}
+/* line 34, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_contact.scss */
+.contact p.submit {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+/* line 39, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_contact.scss */
+.contact p.submit input {
+  background: #363B36;
+  padding: 1.5em 6em;
+  text-transform: uppercase;
+}
+/* line 44, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_contact.scss */
+.contact p.submit input:hover {
+  background: #424842;
+}
+/* line 50, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_contact.scss */
+.contact .form-feedback {
+  padding: 1em 2em;
+  color: white;
+}
+/* line 55, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_contact.scss */
+.contact .form-feedback.form-success {
+  background-color: #2ecc71;
+}
+/* line 59, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_contact.scss */
+.contact .form-feedback.form-error {
+  background-color: #e74c3c;
+}
+/* line 63, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_contact.scss */
+.contact #contact-error {
+  margin: 0 20% 2em;
+}
+@media screen and (max-width: 37.5em) {
+  /* line 63, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_contact.scss */
+  .contact #contact-error {
+    margin: 0 5% 2em;
+  }
+}
+
+/* ====================
+13. FOOTER
+==================== */
+/* line 2, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_footer.scss */
+footer.footer {
+  padding-top: 1em;
+}
+/* line 5, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_footer.scss */
+footer.footer .container {
+  border-top: dashed 2px #f2f2f2;
+}
+/* line 9, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_footer.scss */
+footer.footer p.copyright {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  padding: 2em 0;
+  color: #bfbfbf;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 37.5em) {
+  /* line 9, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_footer.scss */
+  footer.footer p.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 2em 0 0;
+  }
+}
+/* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+footer.footer p.copyright:last-child {
+  margin-right: 0;
+}
+/* line 25, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_footer.scss */
+footer.footer ul.social {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  float: right;
+  text-align: right;
+  margin: 2em auto;
+}
+@media screen and (max-width: 37.5em) {
+  /* line 25, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_footer.scss */
+  footer.footer ul.social {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+}
+/* line 89, /home/srinivas/.rvm/gems/ruby-2.1.5/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+footer.footer ul.social:last-child {
+  margin-right: 0;
+}
+/* line 39, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_footer.scss */
+footer.footer ul.social li {
+  display: inline-block;
+  text-align: center;
+  list-style: none;
+  color: #cccccc;
+  transition: all 0.2s;
+}
+/* line 46, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_footer.scss */
+footer.footer ul.social li a {
+  font-size: 1.3em;
+  padding: 0 0 0 1.2em;
+  color: #cccccc;
+}
+/* line 51, /home/srinivas/Downloads/marketingplan-master/app/assets/stylesheets/partials/_footer.scss */
+footer.footer ul.social li a:hover {
+  color: #363B36;
+}
+
+/* ====================
+14. USER CUSTOMISATION
+==================== */

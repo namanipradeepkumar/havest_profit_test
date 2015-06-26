@@ -1,0 +1,54 @@
+// brand colors (http://name-of-color.com/)
+$black: #000;
+$white: #fff;
+$mountain-mist: #949494;
+$ironside-gray: #666;
+$de-york: #81c784;
+$tuna: #33363f;
+$pumice: #c7c7c7;
+$dark-sea-green: #87b388;
+$gallery: #eee;
+$celeste: #ccc;
+$mercury: #e6e4e4;
+$apple: #4caf50;
+$thunderbird: #c2230e;
+$storm-dust: #626262;
+$buttercup: #f4b01f;
+$alabaster: #fafafa;
+$iron: #d8d8d8;
+
+
+
+// Change the grid settings
+$column: 60px;
+$gutter: 26px;
+$grid-columns: 19;
+$max-width: em(1825px);
+
+// Define your breakpoints
+$large-widescreen: new-breakpoint(max-width 1490px 12);
+$widescreen: new-breakpoint(max-width 1300px 12);
+$desktop: new-breakpoint(max-width 1023px 12);
+$tablet: new-breakpoint(max-width 767px 6);
+// $mobile: new-breakpoint(max-width 479px 4);
+// $desktop2: new-breakpoint(min-width 1024px 12);
+
+
+// base variables
+$base-text-color: $mountain-mist;
+$base-background-color: $gallery;
+$base-link-color: $ironside-gray;
+$base-form-text-color: $black;
+$base-form-placeholder-color: $mountain-mist;
+$base-input-border-color: $mountain-mist;
+
+
+$base-font-size: 14px;
+$base-line-height: 1.5;
+$base-font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
+$base-text-interval: ($base-font-size * $base-line-height);
+
+$base-min-width: 320px;
+
+// @font-face-serif:
+// @font-face-sans-serif:

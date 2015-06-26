@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Harvest Profit</title>
+  <%= stylesheet_link_tag('main', media: 'all', 'data-turbolinks-track' => true) unless content_for?(:devise_new) %>
+  <%= yield(:devise_new) if content_for?(:devise_new) %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

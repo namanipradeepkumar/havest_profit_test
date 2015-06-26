@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Harvest Profit</title>
+
+  <%= stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'kc.fab', media: 'all', 'data-turbolinks-track' => true %>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <%= javascript_include_tag 'active_admin' %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="//cdn.datatables.net/responsive/1.0.6/js/dataTables.responsive.min.js"></script>
+
+</head>
+<body>
+	<div id="wrapper">
+		<header id="header">
+			<div class="logo-area">
+				<a href="#" class="nav-opener"><span></span></a>
+				<div class="logo"><a href="#"><%= image_tag "logo.png" %></a></div>
+			</div>
+			<div class="header-holder">
+				<div class="frame">
+					<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+					<h1>Horob Farms - Risk Management Dashboard</h1>
+				</div>
+			</div>
+		</header>
+		<nav id="nav">
+			<div class="jcf-scrollable">
+				<div class="list-holder">
+					<strong class="title"><i class="fa fa-tachometer"></i><%= link_to ' Dashboard', dashboard_path %></strong>
+					<ul class="accordion">
+						<li><a href="#"><i class="fa fa-line-chart"></i> Markets</a></li>
+						<li><a href="#"><i class="fa fa-sun-o"></i> Weather</a></li>
+						<li>
+							<a href="#" class="opener"><i class="fa fa-pie-chart"></i> Budget</a>
+							<div class="slide">
+								<ul>
+									<li><%= link_to 'Fields', fields_path %></li>
+									<li><a href="#">Inputs</a></li>
+									<li><a href="#">P&amp;L</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#"><i class="fa fa-list-ol"></i><%= link_to 'Contracts', contracts_path %></a></li>
+						<li><a href="#"><i class="fa fa-calculator"></i> What/If Analysis</a></li>
+						<li><a href="#"><i class="fa fa-calendar"></i> Marketing Plan</a></li>
+						<li><a href="#"><i class="fa fa-newspaper-o"></i> News</a></li>
+						<li><a href="#"><i class="fa fa-university"></i></i> Education</a></li>
+					</ul>
+					<div class="btn-holder">
+						<a href="#" class="btn-settings"><i class="fa fa-cog"></i></i> Settings</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+  <%= yield %>
+
+	</div>
+  <%= yield :scripts %>
+</body>
+</html>

@@ -1,0 +1,106 @@
+
+<div class="hold">
+    <div class="container">
+      <p id="notice"><%= notice %></p>
+
+      <h1>Listing Contracts</h1>
+
+      <% @contract_groups.each do |contract_group, contracts| %>
+        <% unless contracts.empty? %>
+          <% contract_type = ContractType.find(contract_group) %>
+          <h3><%= contract_type.description %></h3>
+          <table class = "contracts">
+            <thead>
+              <tr>
+                <% if contract_type.description == "Forward Contract" %>
+                  <th>Open order</th>
+                  <th>Bushels</th>
+                  <th>Delivery location</th>
+                  <th>Futures price</th>
+                  <th>Basis</th>
+                  <th>Cash Price</th>
+                  <th>Contract number</th>
+                  <th>Delivery period</th>
+                  <th>Year</th>
+                  <th>User</th>
+
+                <% end %>
+                <% if contract_type.description == "Hedge-To-Arrive" %>
+                  <th>Open order</th>
+                  <th>Bushels</th>
+                  <th>Delivery location</th>
+                  <th>Futures month</th>
+                  <th>Futures price</th>
+                  <th>Basis</th>
+                  <th>Est. Cash Price</th>
+                  <th>Contract number</th>
+                  <th>Long short</th>
+                  <th>Contracts</th>
+                  <th>Strike price</th>
+                  <th>Gain loss</th>
+                  <th>Delivery period</th>
+                  <th>Year</th>
+                  <th>User</th>
+
+                <% end %>
+              </tr>
+            </thead>
+            <tbody>
+              <% contracts.each do |contract| %>
+                <tr>
+                  <% if contract_type.description == "Forward Contract" %>
+                    <td><%= contract.open_order %></td>
+                    <td><%= contract.bushels %></td>
+                    <td><%= contract.delivery_location %></td>
+                    <td><%= number_to_currency(contract.futures_price) %></td>
+                    <td><%= number_to_currency(contract.basis) %></td>
+                    <td><%= number_to_currency(contract.basis + contract.futures_price) %></td>
+                    <td><%= contract.contract_number %></td>
+                    <td><%= contract.delivery_period %></td>
+                    <td><%= contract.year %></td>
+                    <td><%= contract.user_id %></td>
+
+                  <% end %>
+                  <% if contract_type.description == "Hedge-To-Arrive" %>
+                    <td><%= contract.open_order %></td>
+                    <td><%= contract.bushels %></td>
+                    <td><%= contract.delivery_location %></td>
+                    <td><%= contract.futures_month %></td>
+                    <td><%= contract.futures_price %></td>
+                    <td><%= contract.basis %></td>
+                    <td><%= number_to_currency(contract.basis + contract.futures_price) %></td>
+                    <td><%= contract.contract_number %></td>
+                    <td><%= contract.long_short %></td>
+                    <td><%= contract.contracts %></td>
+                    <td><%= contract.strike_price %></td>
+                    <td><%= contract.gain_loss %></td>
+                    <td><%= contract.delivery_period %></td>
+                    <td><%= contract.year %></td>
+                    <td><%= contract.user_id %></td>
+
+                  <% end %>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        <% end %>
+      <% end %>
+
+      <br>
+
+      <%= link_to 'New Contract', new_contract_path %>
+  </div>
+</div>
+
+<% content_for :scripts do %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('table.contracts').DataTable( {
+        responsive: true,
+        paging: false,
+        searching: false,
+        "sDom": '<"top">rt<"bottom"flp><"clear">'
+      });
+    } );
+  </script>
+<% end %>

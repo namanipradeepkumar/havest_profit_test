@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @input.product %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @input.price %>
+</p>
+
+<p>
+  <strong>Units:</strong>
+  <%= @input.units %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @input.supplier %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @input.year %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @input.user_id %>
+</p>
+
+<p>
+  <strong>Input type:</strong>
+  <%= @input.input_type %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @input.quantity %>
+</p>
+
+<%= link_to 'Edit', edit_input_path(@input) %> |
+<%= link_to 'Back', inputs_path %>

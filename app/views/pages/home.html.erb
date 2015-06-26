@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>HarvestProfit - Grain Marketing Consulting and Software</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- google font -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet'>
+    <!-- fontawesome icons -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- main stylesheet - compiled from Sass partials -->
+    <%= stylesheet_link_tag    'main', media: 'all', 'data-turbolinks-track' => true %>
+
+    <script src="//load.sumome.com/" data-sumo-site-id="61f9677f5c162544b068c34656058cbb84ae56daae6e8ecd2bc413139635d359" async="async"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   <style>
+      @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic);
+
+      font-family: 'Open Sans', sans-serif;
+
+      html {
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      
+
+      .thumbnail {
+        position: relative;
+        padding: 0px;
+        margin-bottom: 20px;
+      }
+
+      .thumbnail img {
+        width: 100%;
+      }     body{padding-top:20px;}
+      .carousel {
+        margin-bottom: 0;
+        padding: 0 40px 30px 40px;
+      }
+      /* The controlsy */
+      .carousel-control {
+        left: -12px;
+        height: 40px;
+        width: 40px;
+        background: none repeat scroll 0 0 #222222;
+        border: 4px solid #FFFFFF;
+        border-radius: 23px 23px 23px 23px;
+        margin-top: 90px;
+      }
+      .carousel-control.right {
+        right: -12px;
+      }
+      /* The indicators */
+      .carousel-indicators {
+        right: 50%;
+        top: auto;
+        bottom: -10px;
+        margin-right: -19px;
+      }
+      /* The colour of the indicators */
+      .carousel-indicators li {
+        background: #cecece;
+      }
+      .carousel-indicators .active {
+      background: #428bca;
+      }
+      
+    </style>
+  </head>
+  <body>
+
+    <!-- ///// NAVIGATION HEADER ///// -->
+
+    <header id="navigation" class="navigation headroom">
+      <div class="navigation-wrapper">
+
+          <!-- logo - you can put yours here -->
+          <%= link_to root_path, class: :logo do %>
+            <%= image_tag "logo.png" %>
+          <% end %>
+
+        <!-- mobile menu toggle -->
+          <a href="" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+
+          <!-- navigation menu -->
+          <div class="nav">
+              <ul id="navigation-menu">
+                <li class="nav-link active"><a href="#section-intro">Home</a></li>
+                <li class="nav-link"><a href="#section-features">Consulting</a></li>
+                <li class="nav-link"><a href="#section-showcase">Software</a></li>
+                <li class="nav-link"><a href="#section-blog">Blog</a></li>
+                <li class="nav-link"><a href="#section-contact">Contact</a></li>
+                <li class="nav-link"><a href="users/sign_in">Login</a></li>
+              </ul>
+          </div>
+        </div>
+    </header>
+
+
+
+    <!-- ///// INTRO SECTION  ///// -->
+
+    <section class="intro" id="section-intro">
+      <div class="image-bg" data-stellar-background-ratio="0.2"></div>
+      <div class="color-overlay"></div>
+      <div class="container">
+
+        <div class="logo">
+          <a href="index.html"><h1><%= image_tag "logo-white.png", alt: :logo %></h1></a>
+        </div>
+        <h3>We are here to help you navigate today's volatile farm economy.</h3>
+      </br>
+        <h3>Offering Innovative Risk Management Tools + One-on-One Consulting</h3>
+      </div>
+
+      <!-- the 'jump down' button to scroll to next section -->
+      <a href="#section-features" class="jump-down"><i class="fa fa-chevron-down"></i></a>
+    </section>
+
+
+
+    <!-- ///// FEATURES SECTION ///// -->
+
+    <section class="features" id="section-features">
+      <div class="container">
+
+        <div class="title">
+          <h2>Consulting</h2>
+          <hr class="small">
+          <p>Personalized Risk Management Consulting offered by Market Wise Ag Services, LLC</p>
+        </div>
+
+        <div class="feature-items">
+          <div class="feature-item">
+            <i class="fa fa-usd"></i>
+            <h4>Profits Not Predictions</h4>
+            <p>We believe the world is predictably unpredicatable. No one has a crystal ball.  We approach marketing from a business standpoint focusing on taking advantage of profitable opportunities.</p>
+          </div>
+
+          <div class="feature-item">
+            <i class="fa fa-line-chart"></i>
+            <h4>Strategy Updates</h4>
+            <p>The best times to make marketing decisions is oftentimes when you're the busiest, during the growing season.  We proactively contact you regarding market strategies specific to your operation. </p>
+          </div>
+
+          <div class="feature-item">
+            <i class="fa fa-lock"></i>
+            <h4>Long-Term Planning</h4>
+            <p>Our sole incentive is your long-term success.  We are a confidential sounding board for all business aspects of your operation.</p>
+          </div>
+        </div>
+
+        <div class="feature-items">
+
+          <div class="feature-item">
+            <i class="fa fa-list"></i>
+            <h4>Tailored Recommendations</h4>
+            <p>We recommend strategies that are tailored to your operation.  We consider your cost structure, local basis, and risk tolerance.</p>
+          </div>
+
+          <div class="feature-item">
+            <i class="fa fa-university"></i>
+            <h4>Education</h4>
+            <p>We will help educate you on the benefits (and costs) of the many marketing tools and strategies available to you.</p>
+          </div>
+
+          <div class="feature-item">
+            <i class="fa fa-table"></i>
+            <h4>Custom Analysis</h4>
+            <p>From land rent decisions to flex rent structuring to off-farm investments (and everything in between), we are available to provide you with objective numbers-based analyis and advice.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ///// NEWSLETTER SECTION ///// -->
+
+    <section class="newsletter">
+      <div class="image-bg" data-stellar-background-ratio="0.5"></div>
+      <div class="color-overlay"></div>
+      <div class="container">
+
+        <div class="nl-text">
+          <h3>Sign up for our free weekly newsletter!</h3>
+        </br>
+          <p>Get a variety farm finance/marketing ideas as well as information on future product updates.</p>
+        </div>
+
+        <div class="nl-form">
+
+          <!-- newsletter form -->
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+              <form action="http://rentthefarm.us5.list-manage.com/subscribe/post?u=a5f91c964ceaac4b0e2ecf201&amp;id=b6f56baa96" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                  <div class="mc-field-group">
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="email@domain.com">
+                    <input type="submit" value="Get Newsletter" name="subscribe" id="mc-embedded-subscribe" class="button">
+                  </div>
+                	<div id="mce-responses" class="clear">
+                		<div class="response" id="mce-error-response" style="display:none"></div>
+                		<div class="response" id="mce-success-response" style="display:none"></div>
+                	</div>
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;"><input type="text" name="b_c555d74e15c7af3cde2eb8337_8bac3d8d0b" tabindex="-1" value=""></div>
+                </div>
+              </form>
+            </div>
+            <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+            <!--End mc_embed_signup-->
+          </div>
+
+            <!--End mc_embed_signup-->
+
+            <div id="newsletter-error"></div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- ///// SHOWCASE SECTION ///// -->
+
+    <!-- ///// FEATURES SECTION ///// -->
+
+    <section class="features" id="section-features">
+      <div class="container">
+
+        <div class="title">
+          <h2>Software</h2>
+          <hr class="small">
+          <p>Simplifying Your Marketing With Innovative Software Tools</p>
+        </div>
+
+        <div class="feature-items">
+
+          <div class="feature-item">
+            <i class="fa fa-tachometer"></i>
+            <h4>Marketing Dashboard</h4>
+            <p>Track your inputs costs, forward contracts, futures/option postions, and much more using our innovative web-based risk management dashboard.</p>
+          </div>
+
+          <div class="feature-item">
+            <i class="fa fa-pie-chart"></i>
+            <h4>Profit Calculator</h4>
+            <p>Your farm is comprised of multiple "manufacturing plants", your fields.  Calculate your P&L on a field-by-field basis and use those insights to fine tune your operation over time.</p>
+          </div>
+
+          <div class="feature-item">
+            <i class="fa fa-calendar"></i>
+            <h4>Marketing Plan</h4>
+            <p>Add structure to your marketing by building a profit and time-based marketing plan.  As plans always change, your advisor will help you to implement the plan throughout the marketing season.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="chart" id="section-showcase">
+      <div class="container">
+
+        <div class="title">
+          <h2>Software - First Look</h2>
+          <hr class="small">
+          <p>A preview of one piece of functionality we've built, our Marketing Plan Builder with text and email notifications.  Feel free to modify the Margin Targets or Decision Dates to see how it works.  Best viewed on desktop or tablet (for now).</p>
+        </div>
+
+        <!-- High Charts -->
+        <div id="hscontainer" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+        </br>
+
+        <!-- Profit Plan -->
+        <h4>Baseline Data</h4>
+        <div class="baseline">
+          <div class="baselineinput">
+            Yield: <input type="number" class="mycalc" id="yield" value="150" style="text-align: center;">
+          </div>
+          <div class="baselineinput">
+            Cost/Acre: <input type="number" class="mycalc" id="cost" value="555.00" style="text-align: center;">
+          </div>
+          <div class="baselinecalc">
+            Breakeven: </br>
+            <span id="baselinecalcvalue">$3.70</span>
+          </div>
+          <div class="baselineinput">
+            Basis Estimate: <input type="number" class="mycalc" id="basis" value="-.30" style="text-align: center;">
+          </div>
+        </div>
+
+
+
+        <div class="split">
+          <div class="split-table">
+            <h4>Profit Target Triggers</h4>
+            <table class="table-minimal">
+              <thead>
+                <tr>
+                  <th style="text-align: center;">Target</th>
+                  <th style="text-align: center;">Margin</th>
+                  <th style="text-align: center;">Futures Price</th>
+                  <th style="text-align: center;">Bushels</th>
+                  <th style="text-align: center;">Execution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#1</td>
+                  <td><input type="Number" class="mycalc" id="margin1" value=".25" step=".05" style="text-align: center;"></td>
+                  <td><span id="target1">$4.25</span></td>
+                  <td><input type="Number" class="mycalc" value="20000" step="1000" style="text-align: center;"></td>
+                  <td style="text-align: center;">20k HTA @ $4.32</td>
+                </tr>
+                <tr>
+                  <td>#2</td>
+                  <td><input type="Number" class="mycalc" id="margin2" value=".50" step=".05" style="text-align: center;"></td>
+                  <td><span id="target2">$4.50</span></td>
+                  <td><input type="Number" class="mycalc" value="20000" step="1000" style="text-align: center;"></td>
+                  <td style="text-align: center;">20k Mar '16 $4.00/$4.70 Collar @ $.22</td>
+                </tr>
+                <tr>
+                  <td>#3</td>
+                  <td><input type="Number" class="mycalc" id="margin3" value=".75" step=".05" style="text-align: center;"></td>
+                  <td><span id="target3">$4.75</span></td>
+                  <td><input type="Number" class="mycalc" value="20000" step="1000" style="text-align: center;"></td>
+                  <td style="text-align: center;"></td>
+                </tr>
+                <tr>
+                  <td>#4</td>
+                  <td><input type="Number" class="mycalc" id="margin4" value="1.00" step=".05" style="text-align: center;"></td>
+                  <td><span id="target4">$5.00</span></td>
+                  <td><input type="Number" class="mycalc" value="20000" step="1000" style="text-align: center;"></td>
+                  <td style="text-align: center;"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="split-table">
+
+            <h4>Decision Date Triggers</h4>
+             <table class="table-minimal">
+              <thead>
+                <tr>
+                  <th style="text-align: center;">Target</th>
+                  <th style="text-align: center;">Start Date</th>
+                  <th style="text-align: center;">Bushels</th>
+                  <th style="text-align: center;">Execution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#1</td>
+                  <td><input type="date" class="mycalc" id="targetdate1" value="2015-03-20"style="text-align: center;"></td>
+                  <td><input type="Number" class="mycalc" value="20000" step="1000" style="text-align: center;"></td>
+                  <td style="text-align: center;">20k HTA @ $4.32</td>
+                </tr>
+                <tr>
+                  <td>#2</td>
+                  <td><input type="date" class="mycalc" id="targetdate2" value="2015-05-15" style="text-align: center;"></td>
+                  <td><input type="Number" class="mycalc" value="20000" step="1000" style="text-align: center;"></td>
+                  <td style="text-align: center;">20k Mar '16 $4.00/$4.70 Collar @ $.22</td>
+                </tr>
+                <tr>
+                  <td>#3</td>
+                  <td><input type="date" class="mycalc" id="targetdate3" value="2015-06-15" style="text-align: center;"></td>
+                  <td><input type="Number" class="mycalc" value="20000" step="1000" style="text-align: center;"></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>#4</td>
+                  <td><input type="date" class="mycalc" id="targetdate4" value="2015-07-15" style="text-align: center;"></td>
+                  <td><input type="Number" class="mycalc" value="20000" step="1000" style="text-align: center;"></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ///// BLOG SECTION ///// -->
+    <section class="contact" id="section-blog">
+     <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="text-center">
+            <h1>LATEST NEWS</h1>
+            <p>WE SHARE CRUNCHY DETAILS ON A REGULAR BASIS - HERE ARE OUR LATEST POSTS</p>
+          </div>
+          <div id="Carousel" class="carousel slide">
+            <ol class="carousel-indicators">
+              <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#Carousel" data-slide-to="1"></li>
+              <li data-target="#Carousel" data-slide-to="2"></li>
+            </ol>
+            
+             
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              
+              <div class="item active">
+                <div class="row">
+                  <div class="col-xs-18 col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                    <img src="images/1.jpg" alt="">
+                      <div class="caption text-center">
+                      <h4>Video Post</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+                      <p><a href="#" class="" >readmore</a></p>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-18 col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                    <img src="images/2.jpg" alt="">
+                      <div class="caption text-center">
+                      <h4>Quote Post</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+                      <p><a href="#" class="" >readmore</a></p>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-18 col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                    <img src="images/3.jpg" alt="">
+                      <div class="caption text-center">
+                      <h4>Audio Post</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+                      <p><a href="#" class="">readmore</a></p>
+                    </div>
+                    </div>
+                  </div>
+                </div><!--.row-->
+              </div>
+              <div class="item">
+                <div class="row">
+                  <div class="col-xs-18 col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                    <img src="images/1.jpg" alt="">
+                      <div class="caption text-center">
+                      <h4>Video Post</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+                      <p><a href="#" class="" >readmore</a></p>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-18 col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                    <img src="images/2.jpg" alt="">
+                      <div class="caption text-center">
+                      <h4>Quote Post</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+                      <p><a href="#" class="" >readmore</a></p>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-18 col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                    <img src="images/3.jpg" alt="">
+                      <div class="caption text-center">
+                      <h4>Audio Post</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+                      <p><a href="#" class="">readmore</a></p>
+                    </div>
+                    </div>
+                  </div>
+                </div><!--.row-->
+              </div>
+              <div class="item">
+                <div class="row">
+                  <div class="col-xs-18 col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                    <img src="images/1.jpg" alt="">
+                      <div class="caption text-center">
+                      <h4>Video Post</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+                      <p><a href="#" class="" >readmore</a></p>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-18 col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                    <img src="images/2.jpg" alt="">
+                      <div class="caption text-center">
+                      <h4>Quote Post</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+                      <p><a href="#" class="" >readmore</a></p>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-18 col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                    <img src="images/3.jpg" alt="">
+                      <div class="caption text-center">
+                      <h4>Audio Post</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+                      <p><a href="#" class="">readmore</a></p>
+                    </div>
+                    </div>
+                  </div>
+                </div><!--.row-->
+              </div><!--.item-->
+              
+            </div><!--.carousel-inner-->
+          </div><!--.Carousel-->
+             <div class="text-center"><a class="btn btn-success">VIEW ALL POSTS</a></div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+
+      
+   
+    <!-- ///// CONTACT SECTION ///// -->
+
+    <section class="contact" id="section-contact">
+      <div class="container">
+
+        <div class="title">
+          <h2>Contact</h2>
+          <hr class="small">
+          <address>
+            <p>Harvest Profit<br>1506 Main Ave #204B <br> Moorhead, MN 56560</p>
+          </address>
+          <p><a href="tel:+1-701-361-7070">+1 701-361-7070</a> <br> <%= mail_to "nickh@marketwiseagservices.com" %></p>
+        </div>
+
+        <div class="contact-form">
+
+          <!-- insert contact form -->
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ///// FOOTER ///// -->
+
+    <footer class="footer">
+      <div class="container">
+
+        <p class="copyright">Copyright &copy; 2014 <a href="index.html">Harvest Profit</a> - All Rights Reserved. </br>Consulting services offered by Market Wise Ag Services, LLC.</p>
+
+        <ul class="social">
+          <!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
+          <li><a href="https://twitter.com/MarketWiseNick"><i class="fa fa-twitter"></i></a></li>
+          <!-- <li><a href="#"><i class="fa fa-google-plus"></i></a></li> -->
+          <!-- <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
+        </ul>
+
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
+
+
+  </body>
+</html>
+
+
+<script>
+    $(document).ready(function() {
+      $('#Carousel').carousel({
+        interval: 5000
+      })
+    });
+  </script>

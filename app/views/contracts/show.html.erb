@@ -1,0 +1,83 @@
+<div class="hold">
+    <div class="container">
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Sale type:</strong>
+      <%= @contract.contract_type %>
+    </p>
+
+    <p>
+      <strong>Open order:</strong>
+      <%= @contract.open_order %>
+    </p>
+
+    <p>
+      <strong>Bushels:</strong>
+      <%= @contract.bushels %>
+    </p>
+
+    <p>
+      <strong>Delivery location:</strong>
+      <%= @contract.delivery_location %>
+    </p>
+
+    <p>
+      <strong>Futures month:</strong>
+      <%= @contract.futures_month %>
+    </p>
+
+    <p>
+      <strong>Futures price:</strong>
+      <%= @contract.futures_price %>
+    </p>
+
+    <p>
+      <strong>Basis:</strong>
+      <%= @contract.basis %>
+    </p>
+
+    <p>
+      <strong>Contract number:</strong>
+      <%= @contract.contract_number %>
+    </p>
+
+    <p>
+      <strong>Long short:</strong>
+      <%= @contract.long_short %>
+    </p>
+
+    <p>
+      <strong>Contracts:</strong>
+      <%= @contract.contracts %>
+    </p>
+
+    <p>
+      <strong>Strike price:</strong>
+      <%= @contract.strike_price %>
+    </p>
+
+    <p>
+      <strong>Gain loss:</strong>
+      <%= @contract.gain_loss %>
+    </p>
+
+    <p>
+      <strong>Delivery period:</strong>
+      <%= @contract.delivery_period %>
+    </p>
+
+    <p>
+      <strong>Year:</strong>
+      <%= @contract.year %>
+    </p>
+
+    <p>
+      <strong>User:</strong>
+      <%= @contract.user_id %>
+    </p>
+
+    <%= link_to 'Edit', edit_contract_path(@contract) %> |
+    <%= link_to 'Back', contracts_path %>
+  </div>
+</div>

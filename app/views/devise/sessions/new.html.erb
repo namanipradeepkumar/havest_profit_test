@@ -1,0 +1,28 @@
+<% content_for :devise_new do %>
+  <%= stylesheet_link_tag 'login' %>
+<% end %>
+
+
+<!-- <%= form_for(:user, :url => session_path(:user)) do |f| %>
+  <h1>HarvestProfit Dashboard</h1>
+  <%= f.text_field :email, placeholder: "E-mail" %>
+  <%= f.password_field :password, placeholder: "Password" %>
+  <button><%= f.submit "Log In" %></button>
+<% end %> -->
+
+
+<%= form_for(:user, :url => session_path(:user)) do |f| %>
+  <h1>HarvestProfit </br> Dashboard Login</h1>
+  <%= f.text_field :email, placeholder: "E-mail" %>
+  <%= f.password_field :password, placeholder: "Password" %>
+  <button>Submit</button>
+<% end %>
+
+
+
+
+<a class="follow" href="https://twitter.com/HarvestProfit" target="_blank"><i class="fa fa-twitter"></i>Follow Us</a>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>

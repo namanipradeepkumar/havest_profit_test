@@ -1,0 +1,21 @@
+<%= form_for(@crop) do |f| %>
+  <% if @crop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@crop.errors.count, "error") %> prohibited this crop from being saved:</h2>
+
+      <ul>
+      <% @crop.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :crop_type %><br>
+    <%= f.text_field :crop_type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
