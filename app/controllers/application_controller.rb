@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def blog
-  redirect_to "http://harvestprofit.herokuapp.com/blog#{request.fullpath.gsub('/blog','')}", :status => :moved_permanently
+  redirect_to "http://harvestprofit.flywheelsites.com/blog#{request.fullpath.gsub('/blog','')}", :status => :moved_permanently
   #redirect_to "http://localhost:3000/blog#{request.fullpath.gsub('/blog','')}", :status => :moved_permanently
 end
 end
