@@ -1,4 +1,9 @@
-# This file is used by Rack-based servers to start the application.
-
-require ::File.expand_path('../config/environment', __FILE__)
+ 
+require ::File.expand_path('../config/environment',  __FILE__)
+ 
+use Rack::ReverseProxy do
+  reverse_proxy /^\/blog(\/.*)$/, 'http://harvestprofit.flywheelsites.com', :username => 'flywheel', :password => 'fill-me-in', :timeout => 500, :preserve_host => true
+end
+ 
+#run Boulder::Application
 run Rails.application

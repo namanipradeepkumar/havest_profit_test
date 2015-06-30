@@ -12,6 +12,7 @@
 
     <!-- main stylesheet - compiled from Sass partials -->
     <%= stylesheet_link_tag    'main', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'blog'%>
 
     <script src="//load.sumome.com/" data-sumo-site-id="61f9677f5c162544b068c34656058cbb84ae56daae6e8ecd2bc413139635d359" async="async"></script>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -24,17 +25,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
    <style>
-      @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic);
-
-      font-family: 'Open Sans', sans-serif;
-
-      html {
-        font-family: 'Open Sans', sans-serif;
-      }
-
-      
-
-      .thumbnail {
+    .thumbnail {
         position: relative;
         padding: 0px;
         margin-bottom: 20px;
@@ -74,8 +65,14 @@
       .carousel-indicators .active {
       background: #428bca;
       }
-      
-    </style>
+      .carousel-image{
+             max-height: 230px;
+            }
+     .allposts{
+      display: none;
+      color: gray;
+     }
+   </style>
   </head>
   <body>
 
@@ -395,7 +392,7 @@
 
 
     <!-- ///// BLOG SECTION ///// -->
-    <section class="contact" id="section-blog">
+    <section class="blog" id="section-blog">
      <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -412,38 +409,44 @@
             
              
             <!-- Carousel items -->
+            
             <div class="carousel-inner">
               
               <div class="item active">
                 <div class="row">
                   <div class="col-xs-18 col-sm-6 col-md-4">
                     <div class="thumbnail">
-                    <img src='<%=@image[0][0]%>' alt="">
+                      <div class="carousel-image">
+                      <img src='<%=@image[0][0]%>' alt="" height="230">
+                      </div>
                       <div class="caption text-center">
                       <h4><%=@title[0]%></h4>
                       <p><%=@description[0]%></p>
-                      <p><a href="#" class="" >readmore</a></p>
+                      <p><a href="<%=@link[0]%>" class="" >readmore</a></p>
                     </div>
                     </div>
                   </div>
                   <div class="col-xs-18 col-sm-6 col-md-4">
                     <div class="thumbnail">
-                    <img src='<%=@image[1][0]%>' alt="">
+                    <div class="carousel-image">
+                    <img src='<%=@image[1][1]%>' alt="" height="230">
+                      </div>
                       <div class="caption text-center">
                       <h4><%=@title[1]%></h4>
                       <p><%=@description[1]%></p>
-                      <p><a href="#" class="" >readmore</a></p>
+                      <p><a href="<%=@link[1]%>" class="" >readmore</a></p>
                     </div>
                     </div>
                   </div>
                   <div class="col-xs-18 col-sm-6 col-md-4">
                     <div class="thumbnail">
-                    <img src='<%=@image[2][0]%>' alt="">
-                    
+                    <div class="carousel-image">
+                    <img src='<%=@image[2][2]%>' alt="" height="230">
+                    </div>
                       <div class="caption text-center">
                       <h4><%=@title[2]%></h4>
                       <p><%=@description[2]%></p>
-                      <p><a href="#" class="">readmore</a></p>
+                      <p><a href="<%=@link[2]%>" class="">readmore</a></p>
                     </div>
                     </div>
                   </div>
@@ -453,31 +456,37 @@
                 <div class="row">
                   <div class="col-xs-18 col-sm-6 col-md-4">
                     <div class="thumbnail">
-                    <img src="images/1.jpg" alt="">
+                    <div class="carousel-image">
+                    <img src='<%=@image[3][3]%>' alt="" height="230">
+                    </div>
                       <div class="caption text-center">
-                      <h4>Video Post</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-                      <p><a href="#" class="" >readmore</a></p>
+                      <h4><%=@title[3]%></h4>
+                      <p><%=@description[3]%></p>
+                      <p><a href="<%=@link[3]%>" class="">readmore</a></p>
                     </div>
                     </div>
                   </div>
                   <div class="col-xs-18 col-sm-6 col-md-4">
                     <div class="thumbnail">
-                    <img src="images/2.jpg" alt="">
+                    <div class="carousel-image">
+                    <img src='<%=@image[4][4]%>' alt="" height="230">
+                    </div>
                       <div class="caption text-center">
-                      <h4>Quote Post</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-                      <p><a href="#" class="" >readmore</a></p>
+                      <h4><%=@title[4]%></h4>
+                      <p><%=@description[4]%></p>
+                      <p><a href="<%=@link[4]%>" class="">readmore</a></p>
                     </div>
                     </div>
                   </div>
                   <div class="col-xs-18 col-sm-6 col-md-4">
                     <div class="thumbnail">
-                    <img src="images/3.jpg" alt="">
+                    <div class="carousel-image">
+                    <img src='<%=@image[5][5]%>' alt="" height="230">
+                    </div>
                       <div class="caption text-center">
-                      <h4>Audio Post</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-                      <p><a href="#" class="">readmore</a></p>
+                      <h4><%=@title[5]%></h4>
+                      <p><%=@description[5]%></p>
+                      <p><a href="<%=@link[5]%>" class="">readmore</a></p>
                     </div>
                     </div>
                   </div>
@@ -487,21 +496,25 @@
                 <div class="row">
                   <div class="col-xs-18 col-sm-6 col-md-4">
                     <div class="thumbnail">
-                    <img src="images/1.jpg" alt="">
+                    <div class="carousel-image">
+                    <img src='<%=@image[6][6]%>' alt="" height="230">
+                    </div>
                       <div class="caption text-center">
-                      <h4>Video Post</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-                      <p><a href="#" class="" >readmore</a></p>
+                      <h4><%=@title[6]%></h4>
+                      <p><%=@description[6]%></p>
+                      <p><a href="<%=@link[6]%>" class="">readmore</a></p>
                     </div>
                     </div>
                   </div>
                   <div class="col-xs-18 col-sm-6 col-md-4">
                     <div class="thumbnail">
-                    <img src="images/2.jpg" alt="">
+                    <div class="carousel-image">
+                    <img src='<%=@image[7][7]%>' alt="" height="230">
+                    </div>
                       <div class="caption text-center">
-                      <h4>Quote Post</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-                      <p><a href="#" class="" >readmore</a></p>
+                      <h4><%=@title[7]%></h4>
+                      <p><%=@description[7]%></p>
+                      <p><a href="<%=@link[7]%>" class="">readmore</a></p>
                     </div>
                     </div>
                   </div>
@@ -520,14 +533,31 @@
               
             </div><!--.carousel-inner-->
           </div><!--.Carousel-->
-             <div class="text-center"><a class="btn btn-success">VIEW ALL POSTS</a></div>
+             <div class="text-center allpostsbtn"><a href="/blog" class="btn btn-success">VIEW ALL POSTS</a></div>
         </div>
       </div>
     </div>
     </section>
 
+<!-- 
+    <div class="allposts">
+    <div class="container">
+    <%@title.length.times do |i|%>
+    <div class="rails-wp-posts row" id='postid_<%=i%>'>
+     <div class="col-md-3">
+      <img src='<%=@image[i][i]%>' alt="" height="230">
+     </div>
+     <div class="col-md-9">
+      <h4><%=@title[i]%></h4>
+      <p><%=@description[i]%></p>
+     </div>
+    </div>
+    <%end%>
+    </div>
+    </div> -->
 
       
+
    
     <!-- ///// CONTACT SECTION ///// -->
 
@@ -581,8 +611,26 @@
 
 <script>
     $(document).ready(function() {
+      // $(".allpostsbtn").click(function(){
+      //   $(".allposts").show();
+      // });
       $('#Carousel').carousel({
         interval: 5000
-      })
+      });
+
     });
+
+      $(".allpostsbtn").click(function(){
+     window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        // alert("you're at the bottom of the page");
+       $("#postid_5").hide();
+      }
+    };
+  });
   </script>
+
+
+
+
+

@@ -21,7 +21,8 @@ gem 'coderay'
 gem 'pg'
 gem 'activeadmin', github: 'activeadmin'
 gem 'nokogiri', '~> 1.6.6.2'
-
+gem "lazyload-rails"
+gem 'rack-reverse-proxy', :require => 'rack/reverse_proxy'
 group :production do
   gem "passenger"
   gem "rails_12factor"

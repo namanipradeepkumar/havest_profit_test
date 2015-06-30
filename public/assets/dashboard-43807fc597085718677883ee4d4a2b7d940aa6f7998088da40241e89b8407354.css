@@ -1,0 +1,2294 @@
+@import "http://cdn.datatables.net/1.10.7/css/jquery.dataTables.css";
+@import "http://cdn.datatables.net/responsive/1.0.6/css/dataTables.responsive.css";
+/* line 4, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/neat/grid/_box-sizing.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 9, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/neat/grid/_box-sizing.scss */
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/* line 1, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 4, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 7, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+body {
+  margin: 0;
+  color: #949494;
+  background: #eee;
+  font: 14px/1.5 "Open Sans", "Arial", "Helvetica", sans-serif;
+  min-width: 320px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: none;
+}
+@media screen and (max-width: 767px) {
+  /* line 7, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+  body {
+    font-size: 13px;
+  }
+}
+
+/* line 20, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+* {
+  max-height: 1000000px;
+}
+
+/* line 22, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
+  display: block;
+}
+
+/* line 26, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+img {
+  border-style: none;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 32, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+a {
+  text-decoration: none;
+  color: #666;
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+/* line 36, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+a:hover {
+  opacity: 0.8;
+}
+
+/* line 41, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+input,
+textarea,
+select {
+  font: 100% "Open Sans", "Arial", "Helvetica", sans-serif;
+  color: #000;
+  vertical-align: middle;
+}
+
+/* line 49, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+mark {
+  background: none;
+  color: #4caf50;
+}
+/* line 52, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+mark.red {
+  color: #c2230e;
+}
+
+/* line 57, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+/* line 64, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 70, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="file"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  cursor: pointer;
+}
+
+/* line 80, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  margin: 0;
+  padding: 4px 7px;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border: 1px solid #949494;
+}
+/* line 92, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+  border-color: #484848;
+}
+
+/* line 97, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+textarea {
+  overflow: auto;
+  resize: vertical;
+  vertical-align: top;
+}
+
+/* line 103, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
+}
+
+/* line 108, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 113, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+  line-height: 1.2em;
+  margin: 0 0 1em;
+}
+
+/* line 119, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+p {
+  margin: 0 0 1.5em;
+}
+@media screen and (max-width: 767px) {
+  /* line 119, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+  p {
+    margin: 0 0 0.8em;
+  }
+}
+
+/* line 126, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+q {
+  quotes: none;
+}
+/* line 128, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 134, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 142, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 146, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 150, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/_base-reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
+}
+/* line 11, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 24, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.icon-angle-down:before {
+  content: "\f107";
+}
+
+/* line 25, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.icon-cog:before {
+  content: "\e60f";
+}
+
+/* line 26, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.icon-switch:before {
+  content: "\e60e";
+}
+
+/* line 27, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.icon-line-chart:before {
+  content: "\e60d";
+}
+
+/* line 28, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.icon-cloudy:before {
+  content: "\e60c";
+}
+
+/* line 29, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.icon-analysis:before {
+  content: "\e600";
+}
+
+/* line 30, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.icon-arrow-left:before {
+  content: "\e601";
+}
+
+/* line 31, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.icon-arrow-right:before {
+  content: "\e602";
+}
+
+/* line 32, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.icon-budget:before {
+  content: "\e603";
+}
+
+/* line 33, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.icon-contrac:before {
+  content: "\e604";
+}
+
+/* line 34, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.icon-education:before {
+  content: "\e605";
+}
+
+/* line 35, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.icon-marketing:before {
+  content: "\e607";
+}
+
+/* line 36, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.icon-news:before {
+  content: "\e608";
+}
+
+/* line 37, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.icon-sun:before {
+  content: "\e609";
+}
+
+/* line 38, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.icon-sunny:before {
+  content: "\e60a";
+}
+
+/* line 39, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.icon-thermometer:before {
+  content: "\e60b";
+}
+
+/* line 41, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* line 47, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.hidden {
+  display: none;
+}
+
+/* line 51, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  background: #81c784;
+  padding: 5px;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 3px solid #87b388;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* line 61, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.btn:hover {
+  text-decoration: none;
+  background: #4dae52;
+}
+/* line 65, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.btn.log-btn {
+  height: 36px;
+  float: right;
+  padding: 5px 6px 2px 11px;
+}
+/* line 69, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.btn.log-btn i {
+  font-size: 22px;
+  margin: 0 0 0 5px;
+  vertical-align: middle;
+}
+/* line 74, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.btn.log-btn span {
+  display: inline-block;
+  vertical-align: middle;
+}
+@media screen and (max-width: 767px) {
+  /* line 74, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .btn.log-btn span {
+    line-height: 16px;
+  }
+}
+/* line 82, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.btn.yellow-btn {
+  background: #f4b01f;
+  border: none;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 5px 12px 6px;
+}
+@media screen and (max-width: 767px) {
+  /* line 82, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .btn.yellow-btn {
+    padding: 4px 5px;
+  }
+}
+
+/* line 94, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+h1 {
+  font: 30px/1.1 "Open Sans", "Arial", "Helvetica", sans-serif;
+}
+@media screen and (max-width: 767px) {
+  /* line 94, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  h1 {
+    font-size: 20px;
+  }
+}
+
+/* line 101, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 2;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  /* line 101, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  #header {
+    display: table;
+  }
+}
+/* line 109, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#header .header-holder {
+  background: #eee;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  /* line 109, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  #header .header-holder {
+    display: table-header-group;
+  }
+}
+/* line 115, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#header .header-holder .frame {
+  overflow: hidden;
+  padding: 24px 90px 14px 106px;
+}
+@media screen and (max-width: 1490px) {
+  /* line 115, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  #header .header-holder .frame {
+    padding: 24px 50px 14px 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 115, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  #header .header-holder .frame {
+    padding: 5px;
+  }
+}
+/* line 126, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#header h1 {
+  margin: 0;
+}
+@media screen and (max-width: 767px) {
+  /* line 126, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  #header h1 {
+    padding: 7px 0 0;
+  }
+}
+
+/* line 134, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.logo-area {
+  -webkit-box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  -ms-box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  background: #81c784;
+  padding: 22px 22px 22px 11px;
+  float: left;
+  width: 300px;
+  border: 1px solid #c7c7c7;
+  border-width: 0 1px 0 0;
+}
+@media screen and (max-width: 1490px) {
+  /* line 134, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .logo-area {
+    width: 260px;
+    padding-right: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 134, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .logo-area {
+    display: table-footer-group;
+    width: 100%;
+    padding: 12px 10px;
+  }
+}
+
+/* line 153, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.logo {
+  float: right;
+  width: 208px;
+}
+@media screen and (max-width: 1490px) {
+  /* line 153, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .logo {
+    width: 180px;
+    padding: 3px 0 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 153, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .logo {
+    float: none;
+    margin: 0 auto;
+  }
+}
+/* line 164, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.logo img {
+  display: block;
+}
+
+/* line 169, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav {
+  position: fixed;
+  top: 74px;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+  -moz-transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+  font-size: 18px;
+  line-height: 1.2;
+  width: 300px;
+  z-index: 1;
+  border: 1px solid #c7c7c7;
+  border-width: 0 1px 0 0;
+  background: #33363f;
+}
+@media screen and (max-width: 1490px) {
+  /* line 169, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  #nav {
+    width: 260px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 169, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  #nav {
+    top: 100px;
+  }
+}
+/* line 185, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .accordion {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  background: #33363f;
+  border-bottom: 1px solid #484b55;
+}
+/* line 194, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .accordion li {
+  border-top: 1px solid #484b55;
+  border-bottom: 1px solid #242730;
+}
+/* line 197, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .accordion li:first-child {
+  border-top: 0;
+}
+/* line 201, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .accordion a {
+  display: block;
+  color: #949494;
+  padding: 23px 15px 20px 34px;
+}
+@media screen and (max-width: 1490px) {
+  /* line 201, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  #nav .accordion a {
+    padding: 15px;
+  }
+}
+/* line 210, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav a {
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+/* line 213, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .title {
+  background-color: #1e212d;
+  background-image: -webkit-linear-gradient(bottom, #1e212d, #33363f);
+  background-image: linear-gradient(to top,#1e212d, #33363f);
+  font: 19px/1.1 "Open Sans", "Arial", "Helvetica", sans-serif;
+  display: block;
+  color: #81c784;
+  position: relative;
+  padding: 25px 10px 24px 76px;
+}
+@media screen and (max-width: 1490px) {
+  /* line 213, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  #nav .title {
+    padding: 15px 15px 15px 55px;
+  }
+}
+/* line 223, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .title:after {
+  position: absolute;
+  top: 19px;
+  left: 29px;
+  content: "";
+  width: 32px;
+  height: 32px;
+  background: url(../images/sprite.png) no-repeat;
+}
+@media screen and (max-width: 1490px) {
+  /* line 223, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  #nav .title:after {
+    left: 14px;
+    top: 9px;
+  }
+}
+/* line 235, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav [class^="icon-"] {
+  font-size: 28px;
+  margin: 0 8px 0 0;
+  vertical-align: middle;
+}
+/* line 240, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .icon-line-chart {
+  font-size: 26px;
+}
+/* line 243, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .icon-cloudy {
+  font-size: 24px;
+}
+/* line 246, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .icon-education {
+  font-size: 34px;
+}
+/* line 249, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .icon-budget {
+  position: relative;
+  display: inline-block;
+}
+/* line 252, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .icon-budget:after {
+  content: "$";
+  margin: 3px 0;
+  font: 700 16px/14px "Open Sans", "Arial", "Helvetica", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* line 260, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .has-drop-down-a {
+  position: relative;
+}
+/* line 262, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .has-drop-down-a:after {
+  position: absolute;
+  top: 28px;
+  right: 20px;
+  content: "\f107";
+  font: normal normal normal 16px/1 'icomoon';
+  speak: none;
+  text-transform: none;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -moz-transition: -moz-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+@media screen and (max-width: 1490px) {
+  /* line 262, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  #nav .has-drop-down-a:after {
+    top: 20px;
+  }
+}
+/* line 276, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .active .has-drop-down-a:after {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+/* line 282, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .slide ul {
+  margin: 0 0 -1px;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid #242730;
+}
+/* line 289, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .slide li:first-child {
+  border-top: 1px solid #484b55;
+}
+/* line 293, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .slide a {
+  opacity: 0.32;
+  padding: 27px 15px 22px 96px;
+}
+/* line 296, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .slide a:hover {
+  opacity: 0.8;
+}
+@media screen and (max-width: 1490px) {
+  /* line 293, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  #nav .slide a {
+    padding: 18px 15px 18px 56px;
+  }
+}
+/* line 304, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .btn-settings {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #242730;
+  padding: 22px 15px 17px 29px;
+  color: #949494;
+  width: 100%;
+  display: block;
+  max-width: 299px;
+  margin: -2px 0 0;
+}
+@media screen and (max-width: 1490px) {
+  /* line 304, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  #nav .btn-settings {
+    padding: 15px;
+  }
+}
+/* line 316, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .btn-settings:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  border-top: 1px solid #484b55;
+  width: 100%;
+}
+/* line 322, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .btn-settings .icon-cog {
+  font-size: 32px;
+}
+/* line 326, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .jcf-scrollable,
+#nav .jcf-scrollbar-slider {
+  height: 100% !important;
+}
+/* line 330, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .jcf-scrollable {
+  width: 100% !important;
+}
+/* line 333, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .jcf-scrollbar-slider,
+#nav .jcf-scrollbar-vertical {
+  background: none;
+  z-index: 5;
+}
+/* line 338, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .list-holder {
+  display: table;
+  width: 100%;
+  height: 100%;
+  table-layout: fixed;
+}
+/* line 344, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .btn-holder {
+  height: 1%;
+  overflow: hidden;
+  display: table-footer-group;
+}
+/* line 349, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .jcf-scrollable-wrapper {
+  width: 100% !important;
+}
+/* line 352, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .jcf-scrollbar-vertical {
+  width: 3px;
+  right: 0;
+}
+/* line 356, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .jcf-scrollbar-handle {
+  width: 3px;
+  background: #81c784;
+}
+/* line 360, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+#nav .jcf-scrollbar-horizontal {
+  display: none;
+}
+
+/* line 365, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-opener {
+  margin: -3px 0;
+  float: left;
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  border-radius: 3px;
+}
+/* line 373, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-opener:before, .nav-opener:after,
+.nav-opener span {
+  background: #fff;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  right: 20%;
+  height: 4px;
+  margin-top: -2px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+/* line 387, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-opener:before, .nav-opener:after {
+  content: " ";
+  top: 28%;
+}
+/* line 392, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-opener:after {
+  top: 72%;
+}
+/* line 395, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-opener:hover {
+  opacity: .9;
+}
+
+/* line 400, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.hold {
+  -webkit-transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+  -moz-transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+  margin: 0 0 0 300px;
+  padding: 82px 90px 20px 104px;
+  min-width: 262px;
+}
+@media screen and (max-width: 1490px) {
+  /* line 400, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .hold {
+    padding: 82px 50px 20px 50px;
+    margin: 0 0 0 260px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  /* line 400, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .hold {
+    padding: 82px 10px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 400, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .hold {
+    padding-top: 110px;
+  }
+}
+
+/* line 419, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-active .nav-opener:after, .nav-active .nav-opener:before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 40%;
+  left: 50%;
+  right: 15%;
+}
+/* line 426, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-active .nav-opener:after {
+  top: 60%;
+}
+/* line 429, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-active .nav-opener:after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/* line 433, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-active .hold {
+  margin: 0 0 0 60px;
+}
+/* line 436, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-active #nav {
+  width: 60px;
+  position: absolute;
+}
+/* line 439, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-active #nav .title {
+  padding: 34px 10px 35px;
+  font-size: 0;
+  line-height: 0;
+}
+@media screen and (max-width: 1490px) {
+  /* line 439, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .nav-active #nav .title {
+    padding: 25px 15px;
+  }
+}
+/* line 446, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-active #nav .title:after {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* line 452, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-active #nav .btn-settings,
+.nav-active #nav .accordion a {
+  padding: 23px 10px 20px;
+  font-size: 0;
+  line-height: 0;
+}
+@media screen and (max-width: 1490px) {
+  /* line 452, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .nav-active #nav .btn-settings,
+  .nav-active #nav .accordion a {
+    padding: 15px 10px;
+  }
+}
+/* line 461, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-active #nav [class^="icon-"] {
+  margin: 0;
+  display: block;
+  text-align: center;
+}
+/* line 466, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-active #nav .slide {
+  background: #33363f;
+  position: absolute !important;
+  left: 100% !important;
+  top: -2px !important;
+  width: 240px !important;
+  display: none !important;
+}
+/* line 473, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-active #nav .slide a {
+  font-size: 14px;
+  line-height: 1.2;
+  padding: 15px;
+}
+/* line 479, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-active #nav .accordion,
+.nav-active #nav .jcf-scrollable {
+  overflow: visible !important;
+}
+/* line 483, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-active #nav .jcf-scrollable-wrapper {
+  height: 100% !important;
+}
+/* line 487, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-active #nav .has-drop-down-a:after {
+  display: none;
+}
+/* line 491, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-active #nav .has-drop-down {
+  position: relative;
+}
+/* line 494, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.nav-active #nav .has-drop-down:hover .slide {
+  display: block !important;
+}
+
+/* line 20, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/bourbon/addons/_clearfix.scss */
+.container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/* line 507, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.white-box {
+  background: #fff;
+  margin: 0 0 25px;
+  border-bottom: 3px solid #ccc;
+}
+/* line 20, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/bourbon/addons/_clearfix.scss */
+.white-box::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+@media screen and (max-width: 1023px) {
+  /* line 507, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .white-box {
+    margin: 0 0 10px;
+    height: auto !important;
+  }
+}
+
+/* line 518, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+h2 {
+  font: 700 20px/1.1 "Open Sans", "Arial", "Helvetica", sans-serif;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  /* line 518, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  h2 {
+    font-size: 18px;
+  }
+}
+
+/* line 526, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.heading {
+  border-bottom: 4px solid #e6e4e4;
+  padding: 22px 20px 15px 27px;
+}
+/* line 20, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/bourbon/addons/_clearfix.scss */
+.heading::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+@media screen and (max-width: 767px) {
+  /* line 526, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .heading {
+    padding: 10px;
+  }
+}
+/* line 533, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.heading h2 {
+  margin: 0;
+}
+/* line 536, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.heading .btn {
+  margin: -4px 0 0 5px;
+  float: right;
+}
+@media screen and (max-width: 767px) {
+  /* line 536, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .heading .btn {
+    margin-top: -2px;
+  }
+}
+
+/* line 20, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/bourbon/addons/_clearfix.scss */
+.row::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 547, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.row.row-box {
+  position: relative;
+  padding: 0 316px 0 0;
+}
+@media screen and (max-width: 1023px) {
+  /* line 547, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .row.row-box {
+    padding: 0;
+  }
+}
+
+/* line 556, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.markets-block {
+  margin-right: 2%;
+}
+@media screen and (max-width: 1300px) {
+  /* line 556, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .markets-block {
+    margin-right: 3%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  /* line 556, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .markets-block {
+    margin-right: 0;
+  }
+}
+
+/* line 566, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.weather-block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 316px;
+  padding: 24px 21px 18px 24px;
+}
+@media screen and (max-width: 1023px) {
+  /* line 566, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .weather-block {
+    position: static;
+    width: 100%;
+    padding: 15px 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 566, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .weather-block {
+    padding: 10px;
+  }
+}
+/* line 578, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.weather-block .holder {
+  max-width: 320px;
+  margin: 0 auto;
+}
+/* line 582, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.weather-block .columns {
+  overflow: hidden;
+  padding: 14px 9px 30px 10px;
+  border-bottom: 1px solid #ccc;
+  margin: 0 0 22px;
+  min-height: 219px;
+}
+@media screen and (max-width: 767px) {
+  /* line 582, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .weather-block .columns {
+    padding: 0 0 10px;
+    min-height: 0;
+    margin: 0 0 10px;
+  }
+}
+/* line 594, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.weather-block .col {
+  float: right;
+  width: 55%;
+}
+@media screen and (max-width: 767px) {
+  /* line 594, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .weather-block .col {
+    width: 50% !important;
+  }
+}
+/* line 600, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.weather-block .col:first-child {
+  float: left;
+  width: 45%;
+  padding: 3px 0 0;
+}
+@media screen and (max-width: 767px) {
+  /* line 600, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .weather-block .col:first-child {
+    padding: 0;
+  }
+}
+/* line 608, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.weather-block .col .ico-weather {
+  display: block;
+  text-align: center;
+  padding: 0 0 0 37px;
+}
+@media screen and (max-width: 767px) {
+  /* line 608, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .weather-block .col .ico-weather {
+    padding: 0;
+    text-align: right;
+  }
+}
+/* line 616, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.weather-block .col .ico-weather a {
+  font-size: 74px;
+  color: #81c784;
+}
+@media screen and (max-width: 767px) {
+  /* line 616, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .weather-block .col .ico-weather a {
+    font-size: 65px;
+  }
+}
+/* line 625, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.weather-block .icon-thermometer {
+  display: block;
+  width: 71px;
+  height: 71px;
+  background: #d2d2d2;
+  color: #fff;
+  font-size: 58px;
+  margin: 0 0 23px;
+  padding: 7px 7px 5px;
+  text-align: center;
+}
+/* line 636, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.weather-block .title {
+  font: 700 18px/1.1 "Open Sans", "Arial", "Helvetica", sans-serif;
+  display: block;
+  margin: 0 0 10px;
+  text-align: right;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  /* line 636, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .weather-block .title {
+    font-size: 14px;
+  }
+}
+/* line 646, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.weather-block .temp {
+  font: 700 47px/1.1 "Open Sans", "Arial", "Helvetica", sans-serif;
+  display: block;
+  text-align: center;
+  color: #33363f;
+  padding: 0 0 3px 20px;
+}
+@media screen and (max-width: 767px) {
+  /* line 646, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .weather-block .temp {
+    font-size: 50px;
+    padding: 0;
+    text-align: right;
+  }
+}
+/* line 658, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.weather-block .short-info {
+  font-size: 0;
+  line-height: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media screen and (max-width: 1023px) {
+  /* line 658, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .weather-block .short-info {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 658, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .weather-block .short-info {
+    padding: 0 0 10px;
+  }
+}
+/* line 669, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.weather-block .short-info .item {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  padding: 5px;
+  width: 90px;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: normal;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 767px) {
+  /* line 669, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .weather-block .short-info .item {
+    width: 72px;
+  }
+}
+/* line 684, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.weather-block .short-info .degrees,
+.weather-block .short-info .week-day,
+.weather-block .short-info .ico-weather {
+  display: block;
+}
+/* line 689, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.weather-block .short-info .ico-weather {
+  margin: 0 0 11px;
+}
+/* line 691, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.weather-block .short-info .ico-weather a {
+  font-size: 50px;
+  color: #949494;
+}
+/* line 696, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.weather-block .short-info .week-day {
+  margin: 0 0 10px;
+}
+
+/* line 702, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.weather-info {
+  margin: 0;
+  padding: 0 0 0 2px;
+}
+/* line 705, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.weather-info dt {
+  float: left;
+  margin: 0 4px 0 0;
+}
+/* line 709, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.weather-info dd {
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+/* line 715, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.table-area {
+  white-space: nowrap;
+  padding: 21px 28px 10px;
+  font-size: 0;
+  line-height: 0;
+}
+@media screen and (max-width: 1023px) {
+  /* line 715, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .table-area {
+    padding: 21px 10px 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 715, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .table-area {
+    padding: 10px;
+  }
+}
+/* line 726, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.table-area .table-holder {
+  padding: 0 0 32px;
+  max-height: 314px;
+}
+@media screen and (max-width: 1023px) {
+  /* line 726, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .table-area .table-holder {
+    padding: 0 0 10px;
+    max-height: none;
+  }
+}
+/* line 734, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.table-area .jcf-scrollbar-vertical {
+  right: -19px;
+}
+
+/* line 739, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+h3 {
+  font: 600 20px/1.1 "Open Sans", "Arial", "Helvetica", sans-serif;
+  color: #626262;
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1023px) {
+  /* line 739, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+  }
+}
+
+/* line 750, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.table-box {
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  text-align: left;
+  width: 274px;
+  margin: 0 0 0 40px;
+  white-space: normal;
+  font: 15px/1.07 "Open Sans", "Arial", "Helvetica", sans-serif;
+}
+@media screen and (max-width: 1490px) {
+  /* line 750, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .table-box {
+    width: 234px;
+    margin-left: 30px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  /* line 750, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .table-box {
+    width: 290px;
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  /* line 750, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .table-box {
+    width: 230px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 750, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .table-box {
+    width: 220px;
+  }
+}
+/* line 773, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.table-box:first-child {
+  margin-left: 6px;
+}
+/* line 776, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.table-box h3 {
+  text-align: center;
+}
+/* line 779, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.table-box table {
+  width: 100%;
+}
+/* line 782, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.table-box th,
+.table-box td {
+  font-weight: normal;
+  padding: 13px 10px 12px;
+  min-width: 70px;
+}
+@media screen and (max-width: 1300px) {
+  /* line 782, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .table-box th,
+  .table-box td {
+    padding: 12px 10px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  /* line 782, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .table-box th,
+  .table-box td {
+    padding: 12px 5px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 782, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .table-box th,
+  .table-box td {
+    padding: 10px 5px;
+  }
+}
+/* line 797, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.table-box mark {
+  font-weight: 600;
+}
+
+/* line 802, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel {
+  position: relative;
+  padding: 22px 32px 26px 28px;
+}
+@media screen and (max-width: 1300px) {
+  /* line 802, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .summary-carousel {
+    padding: 18px 20px 20px 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 802, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .summary-carousel {
+    padding: 10px;
+  }
+}
+/* line 811, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel .holder {
+  overflow: hidden;
+}
+/* line 814, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel .h-frame {
+  margin: 0 -26px;
+}
+@media screen and (max-width: 1490px) {
+  /* line 814, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .summary-carousel .h-frame {
+    margin: 0 -10px;
+  }
+}
+/* line 820, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel .mask {
+  position: relative;
+  overflow: hidden;
+  height: auto !important;
+  width: 100%;
+  float: left;
+}
+/* line 827, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel .slideset {
+  width: 100% !important;
+  white-space: nowrap;
+  font-size: 0;
+  line-height: 0;
+}
+/* line 833, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel .slide {
+  font-size: 15px;
+  line-height: 1.2;
+  width: 33.3333% !important;
+  letter-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 26px;
+  white-space: normal;
+}
+@media screen and (max-width: 1490px) {
+  /* line 833, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .summary-carousel .slide {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  /* line 833, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .summary-carousel .slide {
+    width: 100% !important;
+    width: 50% !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 833, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .summary-carousel .slide {
+    width: 100% !important;
+  }
+}
+/* line 855, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel .frame {
+  border: 1px solid #e0e0e0;
+  padding: 16px 8px 11px 12px;
+}
+@media screen and (max-width: 1490px) {
+  /* line 855, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .summary-carousel .frame {
+    padding: 5px 8px;
+  }
+}
+/* line 862, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel .line {
+  font-size: 0;
+  line-height: 0;
+  padding: 19px 0 0;
+}
+/* line 20, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/bourbon/addons/_clearfix.scss */
+.summary-carousel .line::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 867, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel .line:first-child {
+  padding-top: 0;
+}
+@media screen and (max-width: 1490px) {
+  /* line 862, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .summary-carousel .line {
+    padding: 10px 0 0;
+  }
+}
+/* line 874, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel .box {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  min-width: 165px;
+  font-size: 15px;
+  line-height: 1.2;
+  padding: 5px;
+}
+@media screen and (max-width: 1490px) {
+  /* line 874, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .summary-carousel .box {
+    width: auto;
+    display: block;
+    min-width: 0;
+  }
+}
+@media screen and (max-width: 1300px) {
+  /* line 874, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .summary-carousel .box {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 874, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .summary-carousel .box {
+    font-size: 12px;
+    display: inline-block;
+    min-width: 134px;
+    width: 40%;
+  }
+}
+/* line 896, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel .box img {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 900, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel .box dl {
+  margin: 0;
+  padding: 3px 0 0;
+  max-width: 150px;
+  overflow: hidden;
+}
+/* line 906, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel .box dt {
+  float: left;
+  position: relative;
+  padding: 0 4px 0 0;
+  margin: 0 4px 8px 0;
+  width: 60%;
+  max-width: 80px;
+}
+/* line 913, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel .box dt:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: ":";
+}
+@media screen and (max-width: 1490px) {
+  /* line 906, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .summary-carousel .box dt {
+    width: auto;
+  }
+}
+/* line 921, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel .box dd {
+  margin: 0 0 8px;
+  float: left;
+}
+/* line 926, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel .chart {
+  float: right;
+  padding: 5px;
+}
+@media screen and (max-width: 1300px) {
+  /* line 926, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .summary-carousel .chart {
+    width: 70px;
+  }
+}
+/* line 933, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel .title {
+  display: block;
+  margin: 0 0 8px;
+}
+/* line 937, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel .img-box {
+  float: left;
+}
+/* line 940, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel h3 {
+  color: #949494;
+  text-align: center;
+  margin: 0 0 17px;
+}
+@media screen and (max-width: 767px) {
+  /* line 940, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .summary-carousel h3 {
+    margin: 0 0 10px;
+  }
+}
+/* line 948, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel .btn-prev,
+.summary-carousel .btn-next {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin: 9px -74px;
+  color: #d3d3d3;
+  font-size: 36px;
+}
+@media screen and (max-width: 1490px) {
+  /* line 948, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .summary-carousel .btn-prev,
+  .summary-carousel .btn-next {
+    margin: 9px -45px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  /* line 948, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .summary-carousel .btn-prev,
+  .summary-carousel .btn-next {
+    display: none;
+  }
+}
+/* line 963, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.summary-carousel .btn-next {
+  left: auto;
+  right: 0;
+}
+
+/* line 969, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.news-block {
+  float: left;
+  display: block;
+  margin-right: 1.47622%;
+  width: 51.93232%;
+}
+/* line 89, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/neat/grid/_span-columns.scss */
+.news-block:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 1023px) {
+  /* line 969, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .news-block {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 89, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/neat/grid/_span-columns.scss */
+  .news-block:last-child {
+    margin-right: 0;
+  }
+}
+/* line 974, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.news-block .jcf-scrollbar-slider {
+  height: 100% !important;
+}
+/* line 977, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.news-block .jcf-scrollbar-horizontal {
+  display: none;
+}
+/* line 980, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.news-block .news-box {
+  padding: 26px 0 0 29px;
+}
+@media screen and (max-width: 1300px) {
+  /* line 980, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .news-block .news-box {
+    padding: 16px 0 0 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 980, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .news-block .news-box {
+    padding: 10px 0 0 10px;
+  }
+}
+
+/* line 991, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.news-list {
+  margin: 0;
+  padding: 0 30px 0 0;
+  list-style: none;
+  max-height: 342px;
+}
+@media screen and (max-width: 1300px) {
+  /* line 991, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .news-list {
+    max-height: 360px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  /* line 991, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .news-list {
+    max-height: 420px;
+    padding: 0 20px 0 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 991, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .news-list {
+    max-height: 325px;
+  }
+}
+/* line 1006, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.news-list li {
+  display: table;
+  width: 100%;
+  padding: 9px 0 0;
+  margin: 9px 0 0;
+  table-layout: fixed;
+  border-top: 1px solid #e6e4e4;
+}
+@media screen and (max-width: 1300px) {
+  /* line 1006, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .news-list li {
+    display: block;
+    overflow: hidden;
+  }
+}
+/* line 1017, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.news-list li:first-child {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 1023, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.news-list .text-box,
+.news-list .pic-holder,
+.news-list .post-in-time {
+  display: table-cell;
+  vertical-align: middle;
+}
+@media screen and (max-width: 1300px) {
+  /* line 1023, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .news-list .text-box,
+  .news-list .pic-holder,
+  .news-list .post-in-time {
+    display: block;
+  }
+}
+/* line 1032, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.news-list .pic-holder {
+  width: 53px;
+}
+@media screen and (max-width: 1300px) {
+  /* line 1032, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .news-list .pic-holder {
+    float: left;
+    padding: 0 3% 1% 0;
+    width: auto;
+  }
+}
+/* line 1040, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.news-list .text-box {
+  font-size: 15px;
+  line-height: 1.2;
+  padding: 0 0 0 3%;
+}
+@media screen and (max-width: 1300px) {
+  /* line 1040, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .news-list .text-box {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 1040, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .news-list .text-box {
+    font-size: 13px;
+  }
+}
+/* line 1051, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.news-list p {
+  margin: 0 0 5px;
+}
+
+/* line 1056, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.person-name {
+  font-weight: 700;
+  float: left;
+  color: #81c784;
+  margin: 0 3px 0 0;
+}
+@media screen and (max-width: 1300px) {
+  /* line 1056, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .person-name {
+    float: none;
+    display: block;
+  }
+}
+
+/* line 1067, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.post-date {
+  font: 11px/1.1 "Open Sans", "Arial", "Helvetica", sans-serif;
+  display: block;
+}
+
+/* line 1072, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.post-in-time {
+  text-align: right;
+  font-size: 13px;
+  width: 60px;
+}
+@media screen and (max-width: 1300px) {
+  /* line 1072, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .post-in-time {
+    float: right;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 1072, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .post-in-time {
+    font-size: 12px;
+  }
+}
+
+/* line 1084, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.action-links {
+  margin: 0;
+  padding: 2px 25px 25px 98px;
+  list-style: none;
+  font-size: 0;
+  line-height: 0;
+  background: #fff;
+  position: relative;
+}
+@media screen and (max-width: 1300px) {
+  /* line 1084, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .action-links {
+    padding: 2px 20px 25px 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 1084, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .action-links {
+    padding: 2px 10px 10px 10px;
+  }
+}
+/* line 1098, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.action-links li {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 1.2;
+  padding: 0 7px 0 8px;
+}
+/* line 1105, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.action-links a {
+  background: url(../images/sprite.png) no-repeat -9999px -9999px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  display: block;
+  width: 26px;
+  height: 26px;
+}
+/* line 1113, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.action-links .love {
+  background-position: -40px 0;
+}
+/* line 1116, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.action-links .like {
+  background-position: -80px 0;
+}
+
+/* line 1121, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.avatar {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  position: relative;
+}
+/* line 1128, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.avatar:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  -webkit-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.6);
+  -ms-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.6);
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+/* line 1137, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.avatar img {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 1143, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.testimonial-block {
+  float: left;
+  display: block;
+  margin-right: 1.47622%;
+  width: 46.59146%;
+}
+/* line 89, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/neat/grid/_span-columns.scss */
+.testimonial-block:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 1023px) {
+  /* line 1143, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .testimonial-block {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  /* line 89, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/neat/grid/_span-columns.scss */
+  .testimonial-block:last-child {
+    margin-right: 0;
+  }
+}
+/* line 1148, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.testimonial-block .post-area {
+  padding: 24px 0 0 25px;
+}
+@media screen and (max-width: 1300px) {
+  /* line 1148, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .testimonial-block .post-area {
+    padding: 16px 0 0 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 1148, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .testimonial-block .post-area {
+    padding: 10px 0 0 10px;
+  }
+}
+/* line 1157, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.testimonial-block .post-holder {
+  max-height: 345px;
+  padding: 0 32px 0 0;
+}
+@media screen and (max-width: 1300px) {
+  /* line 1157, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .testimonial-block .post-holder {
+    padding: 0 28px 0 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 1157, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .testimonial-block .post-holder {
+    padding: 0 20px 0 0;
+    max-height: 338px;
+  }
+}
+/* line 1168, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.testimonial-block .post {
+  padding: 0 0 5px;
+}
+@media screen and (max-width: 1490px) {
+  /* line 1168, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .testimonial-block .post {
+    padding-bottom: 15px;
+  }
+}
+/* line 1174, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.testimonial-block .pic-holder {
+  float: left;
+  margin: 0 30px 10px 0;
+}
+@media screen and (max-width: 1300px) {
+  /* line 1174, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .testimonial-block .pic-holder {
+    margin: 0 10px 5px 0;
+  }
+}
+/* line 1181, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.testimonial-block .post-frame {
+  overflow: hidden;
+}
+@media screen and (max-width: 1490px) {
+  /* line 1181, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .testimonial-block .post-frame {
+    overflow: visible;
+  }
+}
+/* line 1187, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.testimonial-block .post-in-time {
+  float: right;
+  padding: 7px 0 0;
+}
+@media screen and (max-width: 1300px) {
+  /* line 1187, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .testimonial-block .post-in-time {
+    padding: 0;
+  }
+}
+/* line 1194, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.testimonial-block .text-box {
+  padding: 1px 0 15px;
+}
+@media screen and (max-width: 1490px) {
+  /* line 1194, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .testimonial-block .text-box {
+    padding-bottom: 25px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  /* line 1194, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .testimonial-block .text-box {
+    padding-bottom: 10px;
+  }
+}
+/* line 1202, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.testimonial-block .text-box p {
+  margin: 0 0 3px;
+}
+/* line 1206, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.testimonial-block .post-content {
+  padding: 13px 16px 21px;
+  background: #fafafa;
+  border: 1px solid #d8d8d8;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+@media screen and (max-width: 1490px) {
+  /* line 1206, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .testimonial-block .post-content {
+    padding: 8px 16px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 1206, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .testimonial-block .post-content {
+    padding: 5px 10px;
+  }
+}
+/* line 1219, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.testimonial-block .jcf-scrollbar-slider {
+  height: 100% !important;
+}
+/* line 1222, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.testimonial-block .jcf-scrollbar-horizontal {
+  display: none;
+}
+/* line 1225, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.testimonial-block .action-links {
+  text-align: right;
+  padding: 11px 34px 15px 107px;
+}
+@media screen and (max-width: 1300px) {
+  /* line 1225, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .testimonial-block .action-links {
+    padding: 11px 20px 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 1225, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .testimonial-block .action-links {
+    padding: 5px 13px 10px;
+  }
+}
+
+/* custom scrollbars styles */
+/* line 1238, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.jcf-scrollable-wrapper {
+  box-sizing: content-box;
+  position: relative;
+  width: 100% !important;
+}
+@media screen and (max-width: 1023px) {
+  /* line 1238, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .jcf-scrollable-wrapper {
+    height: 100% !important;
+  }
+}
+
+/* line 1246, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.jcf-scrollable {
+  width: 100% !important;
+}
+@media screen and (max-width: 1023px) {
+  /* line 1246, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .jcf-scrollable {
+    height: 100% !important;
+  }
+}
+
+/* line 1252, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.jcf-scrollbar-vertical {
+  position: absolute;
+  cursor: default;
+  width: 9px;
+  bottom: 0;
+  right: 10px;
+  top: 0;
+}
+@media screen and (max-width: 1023px) {
+  /* line 1252, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .jcf-scrollbar-vertical {
+    right: 5px;
+  }
+}
+
+/* line 1263, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.jcf-scrollbar-vertical .jcf-scrollbar-dec,
+.jcf-scrollbar-vertical .jcf-scrollbar-inc {
+  background: #bbb;
+  height: 14px;
+  width: 14px;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+/* line 1272, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.jcf-scrollbar-vertical .jcf-scrollbar-inc {
+  top: auto;
+  bottom: 0;
+}
+
+/* line 1276, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.jcf-scrollbar-vertical .jcf-scrollbar-handle {
+  background: #cfcfcf;
+  height: 1px;
+  width: 9px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* line 1283, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.jcf-scrollbar-horizontal {
+  position: absolute;
+  right: auto;
+  top: auto;
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 9px;
+  width: 100% !important;
+}
+
+/* line 1293, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.jcf-scrollbar-horizontal .jcf-scrollbar-dec,
+.jcf-scrollbar-horizontal .jcf-scrollbar-inc {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  background: #bbb;
+  height: 14px;
+  width: 14px;
+  display: none;
+}
+
+/* line 1303, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.jcf-scrollbar-horizontal .jcf-scrollbar-inc {
+  left: auto;
+  right: 0;
+}
+
+/* line 1307, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.jcf-scrollbar-horizontal .jcf-scrollbar-slider {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  height: 9px;
+  width: 100% !important;
+}
+
+/* line 1314, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.jcf-scrollbar-horizontal .jcf-scrollbar-handle {
+  position: absolute;
+  background: #cfcfcf;
+  height: 9px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+/* line 1323, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-handle {
+  visibility: hidden;
+}
+
+/* line 1326, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-dec,
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-inc {
+  background: #e3e3e3;
+}
+
+/* line 1331, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.table-minimal {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  font-size: 16px;
+}
+/* line 1360, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.table-minimal tbody tr:hover > td, .table-minimal tbody tr:hover > th {
+  background-color: #fafafa;
+}
+/* line 1363, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.table-minimal tbody tr:first-child td {
+  border-top: 2px solid gainsboro;
+}
+/* line 1369, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.table-minimal thead th {
+  background-color: white;
+  border-bottom: 0px;
+  padding: 0.75em 1em;
+  text-align: left;
+}
+/* line 1377, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.table-minimal tbody {
+  background-color: white;
+}
+/* line 1380, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.table-minimal tbody td {
+  border-bottom: 0px;
+  border-top: 1px solid gainsboro;
+  line-height: 1.5;
+  padding: 0.75em 1em;
+}
+/* line 1386, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+.table-minimal tbody td button {
+  background-color: #477DCA;
+  border-radius: 3px;
+  border: 0;
+  color: white;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 7px 18px;
+  text-decoration: none;
+  background-clip: padding-box;
+  display: inline-block;
+  font-size: .7em;
+  line-height: 1.5;
+  margin-bottom: .3em;
+  margin-right: 0.5em;
+  outline: none;
+  padding: .3em 1em;
+  width: 100%;
+}
+/* line 354, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/bourbon/_bourbon-deprecated-upcoming.scss */
+.table-minimal tbody td button:hover:not(:disabled) {
+  background-color: #578ad4;
+  cursor: pointer;
+}
+/* line 365, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/bourbon/_bourbon-deprecated-upcoming.scss */
+.table-minimal tbody td button:active:not(:disabled), .table-minimal tbody td button:focus:not(:disabled) {
+  background-color: #3c71bb;
+  cursor: pointer;
+}
+/* line 59, /home/srinivas/marketingplan-master/app/assets/stylesheets/vendors/bourbon/_bourbon-deprecated-upcoming.scss */
+.table-minimal tbody td button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+@media screen and (min-width: 40em) {
+  /* line 1386, /home/srinivas/marketingplan-master/app/assets/stylesheets/dashboard.css.scss */
+  .table-minimal tbody td button {
+    margin-bottom: 0;
+    width: auto;
+  }
+}
