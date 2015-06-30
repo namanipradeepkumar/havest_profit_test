@@ -5,6 +5,6 @@ class ChartsController < ApplicationController
 
     symbol = "ZCz15"
 
-    render json: RestClient.get("http://ondemand.websol.barchart.com/getHistory.json?apikey=#{ENV["BARCHART_API_KEY"]}&symbol=#{symbol}&type=daily&startDate=#{start_date}&endDate=#{end_date}").to_s
+    #render json: RestClient.get("http://ondemand.websol.barchart.com/getHistory.json?apikey=#{ENV["BARCHART_API_KEY"]}&symbol=#{symbol}&type=daily&startDate=#{start_date}&endDate=#{end_date}").to_s
   end
 end

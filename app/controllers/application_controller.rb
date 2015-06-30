@@ -5,5 +5,6 @@ class ApplicationController < ActionController::Base
 
   def blog
   redirect_to "http://harvestprofit.herokuapp.com/blog#{request.fullpath.gsub('/blog','')}", :status => :moved_permanently
+  #redirect_to "http://localhost:3000/blog#{request.fullpath.gsub('/blog','')}", :status => :moved_permanently
 end
 end
