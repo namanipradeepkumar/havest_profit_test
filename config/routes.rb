@@ -13,9 +13,9 @@ Rails.application.routes.draw do
 
   ActiveAdmin.routes(self)
 
-  constraints Constraints::CustomSubdomain do
-    get '(*path)' => 'application#blog', :constraints => {subdomain: 'blog'}
-  end
+  # constraints Constraints::CustomSubdomain do
+  #   get '(*path)' => 'application#blog', :constraints => {subdomain: 'blog'}
+  # end
 
   get '/blog' => redirect("http://harvestprofit.herokuapp.com/blog/")
 end
