@@ -17,5 +17,5 @@ Rails.application.routes.draw do
   # get '(*path)' => 'application#blog', :constraints => {subdomain: 'blog'}
   # end
 
-  get '/blog' => redirect("http://harvestprofit.herokuapp.com/blog/")
+  get '/blog' => redirect("http://harvestprofit.flywheelsites.com/blog/")
 end
