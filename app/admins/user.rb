@@ -3,7 +3,7 @@ ActiveAdmin.register User, namespace: :admins do
   filter :name
   filter :cell_phone
   filter :email
-  filter :consultant, collection: Consultant.all.map{|consultant| [consultant.email, consultant.id] }
+  #filter :consultant, collection: Consultant.all.map{|consultant| [consultant.email, consultant.id] }
 
   permit_params :name, :email, :cell_phone, :password, :consultant_id
 
