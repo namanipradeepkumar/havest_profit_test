@@ -33,7 +33,7 @@
 
       .thumbnail img {
         width: 100%;
-      }     body{padding-top:20px;}
+      }     
       .carousel {
         margin-bottom: 0;
         padding: 0 40px 30px 40px;
@@ -68,10 +68,7 @@
       .carousel-image{
              max-height: 230px;
             }
-     .allposts{
-      display: none;
-      color: gray;
-     }
+     
    </style>
   </head>
   <body>
@@ -520,10 +517,10 @@
                   </div>
                   <div class="col-xs-18 col-sm-6 col-md-4">
                     <div class="thumbnail">
-                    <img src="images/3.jpg" alt="">
+                    <img src="<%=@image[8][8]%>" alt="">
                       <div class="caption text-center">
-                      <h4>Audio Post</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+                      <h4><%=@title[8]%></h4>
+                      <p><%=@description[8]%></p>
                       <p><a href="#" class="">readmore</a></p>
                     </div>
                     </div>
@@ -611,23 +608,14 @@
 
 <script>
     $(document).ready(function() {
-      // $(".allpostsbtn").click(function(){
-      //   $(".allposts").show();
-      // });
+      
       $('#Carousel').carousel({
         interval: 5000
       });
 
     });
 
-      $(".allpostsbtn").click(function(){
-     window.onscroll = function(ev) {
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        // alert("you're at the bottom of the page");
-       $("#postid_5").hide();
-      }
-    };
-  });
+      
   </script>
 
 

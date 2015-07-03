@@ -7,7 +7,7 @@ class PagesController < ApplicationController
     @link = Array.new
     require 'nokogiri'
     require 'open-uri'
-     url="http://harvestprofit.flywheelsites.com/hexahost.com/blogs/?feed=rss2"
+     url="http://harvestprofit.brilliancetechsols.com/feed/"
     @doc = Nokogiri::XML(open(url,:http_basic_authentication => ['flywheel', 'melted-juice'] ))
    
 
@@ -58,5 +58,5 @@ class PagesController < ApplicationController
   	@fields = Field.all
 
   end
-
+  
 end
