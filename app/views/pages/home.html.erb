@@ -67,6 +67,7 @@
       }
       .carousel-image{
              max-height: 230px;
+             min-height: 230px;
             }
      
    </style>
@@ -419,7 +420,7 @@
                       </div>
                       <div class="caption text-center">
                       <h4><%=@title[0]%></h4>
-                      <p><%=@description[0]%></p>
+                      <p><%= truncate @description[0], :length   => 89, :separator => /\w/%></p>
                       <p><a href="<%=@link[0]%>" class="" >readmore</a></p>
                     </div>
                     </div>
@@ -431,7 +432,7 @@
                       </div>
                       <div class="caption text-center">
                       <h4><%=@title[1]%></h4>
-                      <p><%=@description[1]%></p>
+                      <p><%= truncate @description[1], :length   => 89, :separator => /\w/%></p>
                       <p><a href="<%=@link[1]%>" class="" >readmore</a></p>
                     </div>
                     </div>
@@ -443,7 +444,7 @@
                     </div>
                       <div class="caption text-center">
                       <h4><%=@title[2]%></h4>
-                      <p><%=@description[2]%></p>
+                      <p><%= truncate @description[2], :length   => 89, :separator => /\w/%></p>
                       <p><a href="<%=@link[2]%>" class="">readmore</a></p>
                     </div>
                     </div>
@@ -459,7 +460,7 @@
                     </div>
                       <div class="caption text-center">
                       <h4><%=@title[3]%></h4>
-                      <p><%=@description[3]%></p>
+                      <p><%= truncate @description[3], :length   => 89, :separator => /\w/%></p>
                       <p><a href="<%=@link[3]%>" class="">readmore</a></p>
                     </div>
                     </div>
@@ -471,7 +472,7 @@
                     </div>
                       <div class="caption text-center">
                       <h4><%=@title[4]%></h4>
-                      <p><%=@description[4]%></p>
+                      <p><%= truncate @description[4], :length   => 89, :separator => /\w/%></p>
                       <p><a href="<%=@link[4]%>" class="">readmore</a></p>
                     </div>
                     </div>
@@ -483,7 +484,7 @@
                     </div>
                       <div class="caption text-center">
                       <h4><%=@title[5]%></h4>
-                      <p><%=@description[5]%></p>
+                      <p><%= truncate @description[5], :length   => 89, :separator => /\w/%></p>
                       <p><a href="<%=@link[5]%>" class="">readmore</a></p>
                     </div>
                     </div>
@@ -499,7 +500,7 @@
                     </div>
                       <div class="caption text-center">
                       <h4><%=@title[6]%></h4>
-                      <p><%=@description[6]%></p>
+                      <p><%= truncate @description[6], :length   => 89, :separator => /\w/%></p>
                       <p><a href="<%=@link[6]%>" class="">readmore</a></p>
                     </div>
                     </div>
@@ -511,17 +512,18 @@
                     </div>
                       <div class="caption text-center">
                       <h4><%=@title[7]%></h4>
-                      <p><%=@description[7]%></p>
+                      <p><%= truncate @description[7], :length   => 89, :separator => /\w/%></p>
                       <p><a href="<%=@link[7]%>" class="">readmore</a></p>
                     </div>
                     </div>
                   </div>
                   <div class="col-xs-18 col-sm-6 col-md-4">
                     <div class="thumbnail">
-                    <img src="<%=@image[8][8]%>" alt="">
+                    <div class="carousel-image">
+                    <img src="<%=@image[8][8]%>" alt=""></div>
                       <div class="caption text-center">
                       <h4><%=@title[8]%></h4>
-                      <p><%=@description[8]%></p>
+                      <p><%= truncate @description[8], :length   => 89, :separator => /\w/%></p>
                       <p><a href="#" class="">readmore</a></p>
                     </div>
                     </div>
@@ -531,32 +533,13 @@
               
             </div><!--.carousel-inner-->
           </div><!--.Carousel-->
-             <div class="text-center allpostsbtn"><a href="http://harvestprofit.brilliancetechsols.com/blog" class="btn btn-success">VIEW ALL POSTS</a></div>
+             <div class="text-center allpostsbtn"><a href="http://harvestprofit.flywheelsites.com/blog" class="btn btn-success">VIEW ALL POSTS</a></div>
         </div>
       </div>
     </div>
     </section>
 
-<!-- 
-    <div class="allposts">
-    <div class="container">
-    <%@title.length.times do |i|%>
-    <div class="rails-wp-posts row" id='postid_<%=i%>'>
-     <div class="col-md-3">
-      <img src='<%=@image[i][i]%>' alt="" height="230">
-     </div>
-     <div class="col-md-9">
-      <h4><%=@title[i]%></h4>
-      <p><%=@description[i]%></p>
-     </div>
-    </div>
-    <%end%>
-    </div>
-    </div> -->
-
-      
-
-   
+    
     <!-- ///// CONTACT SECTION ///// -->
 
     <section class="contact" id="section-contact">

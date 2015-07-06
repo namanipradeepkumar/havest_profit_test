@@ -21,5 +21,5 @@ Rails.application.routes.draw do
 
   #get '/blog' => redirect("http://harvestprofit.herokuapp.com/blog/")
   #get '/blog' => redirect("http://localhost:3000/blog/"), as: 'blog'
-  get '/blog' => redirect("http://harvestprofit.brilliancetechsols.com/")
+  get '/blog' => redirect("http://harvestprofit.flywheelsites.com/blog")
 end
